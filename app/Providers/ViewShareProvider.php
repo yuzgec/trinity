@@ -23,15 +23,16 @@ class ViewShareProvider extends ServiceProvider
 
     public function boot()
     {
-        config()->set('settings', Setting::pluck('value','item')->all());
 
         if (! app()->runningInConsole()) {
 
-           /* $Pages = Cache::remember('pages',now()->addSeconds(10), function () {return Page::with('getCategory')->get();});
-            $Page_Categories = Cache::remember('page_categories',now()->addSeconds(10), function () {return PageCategory::all(); });
-            $Service = Cache::remember('services',now()->addSeconds(10), function () {return Service::with('getCategory')->get();});
-            $Service_Categories = Cache::remember('service_categories',now()->addSeconds(10), function () {return ServiceCategory::all();});
-            $Blog = Cache::remember('blog',now()->addSeconds(10), function () {return Blog::with('getCategory')->get();});*/
+            config()->set('settings', Setting::pluck('value','item')->all());
+
+            /* $Pages = Cache::remember('pages',now()->addSeconds(10), function () {return Page::with('getCategory')->get();});
+             $Page_Categories = Cache::remember('page_categories',now()->addSeconds(10), function () {return PageCategory::all(); });
+             $Service = Cache::remember('services',now()->addSeconds(10), function () {return Service::with('getCategory')->get();});
+             $Service_Categories = Cache::remember('service_categories',now()->addSeconds(10), function () {return ServiceCategory::all();});
+             $Blog = Cache::remember('blog',now()->addSeconds(10), function () {return Blog::with('getCategory')->get();});*/
 
             $Pages = Page::all();
             $Page_Categories = PageCategory::all();
