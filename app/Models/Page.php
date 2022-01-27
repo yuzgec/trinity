@@ -13,7 +13,7 @@ use Spatie\Activitylog\LogOptions;
 
 class Page extends Model implements HasMedia
 {
-    use HasFactory, SoftDeletes,InteractsWithMedia,LogsActivity;
+    use HasFactory,SoftDeletes,InteractsWithMedia,LogsActivity;
 
     protected $guarded = [];
     protected $table = 'page';
@@ -26,13 +26,5 @@ class Page extends Model implements HasMedia
 
     public function getCategory(){
         return $this->belongsTo('App\Models\PageCategory', 'category');
-    }
-
-    public function registerMediaConversions(Media $media = null): void
-    {
-        $this->addMediaConversion('thumb')
-            ->width(400)
-            ->height(250)
-            ->nonOptimized();
     }
 }

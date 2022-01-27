@@ -17,6 +17,7 @@ class CreatePageTable extends Migration
             $table->string('slug')->nullable();
 
             $table->integer('category')->nullable();
+            $table->string('gallery')->nullable();
 
             $table->longText('short')->nullable();
             $table->longText('desc')->nullable();

@@ -41,7 +41,7 @@
                         <tr class="">
                             <td>
                                 <div class="d-flex py-1 align-items-center">
-                                    <span class="avatar me-2" style="background-image: url({{$item->getFirstMediaUrl()}})"></span>
+                                    <span class="avatar me-2" style="background-image: url({{ (!$item->getFirstMediaUrl('page')) ? '/backend/resimyok.jpg': $item->getFirstMediaUrl('page')}})"></span>
                                     <div class="flex-fill">
                                         <div class="font-weight-medium">{{ $item->title }}</div>
                                     </div>

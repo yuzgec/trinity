@@ -36,11 +36,18 @@ class ServiceController extends Controller
         $New->seo_key = $request->seo_key;
         $New->seo_title = $request->seo_title;
 
-        if($request->image){
-            $New->addMedia($request->image)->toMediaCollection();
+        if($request->hasfile('image')){
+            $New->addMedia($request->image)->withResponsiveImages()->toMediaCollection('page');
+        }
+
+        if($request->hasfile('gallery')) {
+            foreach ($request->gallery as $item){
+                $New->addMedia($item)->withResponsiveImages()->toMediaCollection('gallery');
+            }
         }
 
         $New->save();
+
         toast(SWEETALERT_MESSAGE_CREATE,'success');
         return redirect()->route('service.index');
 
@@ -51,35 +58,49 @@ class ServiceController extends Controller
     {
         $Show = Service::findOrFail($id);
         return view('frontend.service.index', compact('Show'));
-
     }
 
     public function edit($id)
     {
+
+
         $Edit = Service::findOrFail($id);
+
+        //dd($Edit->getMedia('page'));
         $Kategori = ServiceCategory::pluck('title', 'id');
         return view('backend.service.edit', compact('Edit', 'Kategori'));
     }
 
     public function update(ServiceRequest $request, $id)
     {
-
         $Update = Service::findOrFail($id);
-
         $Update->title = $request->title;
         $Update->slug = seo($request->title);
         $Update->category = $request->category;
         $Update->short = $request->short;
         $Update->desc = $request->desc;
+
         $Update->seo_title = $request->seo_title;
         $Update->seo_desc = $request->seo_desc;
         $Update->seo_key = $request->seo_key;
-        $Update->save();
+
+        if($request->removeImage == "1"){
+            $Update->media()->where('collection_name', 'page')->delete();
+        }
 
         if ($request->hasFile('image')) {
-            $Update->media()->delete();
-            $Update->addMedia($request->image)->toMediaCollection();
+            $Update->media()->where('collection_name', 'page')->delete();
+            $Update->addMedia($request->image)->withResponsiveImages()->toMediaCollection('page');
         }
+
+        if($request->hasfile('gallery')) {
+            foreach ($request->gallery as $item){
+                $Update->addMedia($item)->withResponsiveImages()->toMediaCollection('gallery');
+            }
+        }
+
+        $Update->save();
+
         toast(SWEETALERT_MESSAGE_UPDATE,'success');
         return redirect()->route('service.index');
 
@@ -100,7 +121,7 @@ class ServiceController extends Controller
     }
 
     public function getOrder(Request $request){
-        foreach($request->get('page') as  $key => $rank ){
+        foreach($request->get('service') as  $key => $rank ){
             Service::where('id',$rank)->update(['rank'=>$key]);
         }
     }
@@ -127,5 +148,15 @@ class ServiceController extends Controller
             @header('Content-type: text/html; charset=utf-8');
             echo $re;
         }
+    }
+
+    public function deleteGaleriDelete($id){
+
+        $Delete = Service::find($id);
+        $Delete->media()->where('id', \request('image_id'))->delete();
+
+        toast(SWEETALERT_MESSAGE_DELETE,'success');
+        return redirect()->route('service.edit', $id);
+
     }
 }

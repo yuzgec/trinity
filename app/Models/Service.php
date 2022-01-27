@@ -9,7 +9,6 @@ use Spatie\Activitylog\LogOptions;
 use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Service extends Model implements HasMedia
 {
@@ -18,23 +17,14 @@ class Service extends Model implements HasMedia
     protected $guarded = [];
     protected $table = 'service';
 
-
     public function getActivitylogOptions(): LogOptions
     {
         return LogOptions::defaults()
             ->logOnly(['title', 'slug']);
     }
 
-
     public function getCategory(){
         return $this->belongsTo('App\Models\ServiceCategory', 'category');
     }
 
-    public function registerMediaConversions(Media $media = null): void
-    {
-        $this->addMediaConversion('thumb')
-            ->width(400)
-            ->height(250)
-            ->nonOptimized();
-    }
 }

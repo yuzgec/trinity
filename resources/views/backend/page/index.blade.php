@@ -38,7 +38,7 @@
                     @foreach($All as $item)
                     <tr id="page_{{$item->id}}">
                         <td>
-                            <span class="avatar me-2" style="background-image: url({{$item->getFirstMediaUrl()}})"></span>
+                            <span class="avatar me-2" style="background-image: url({{ (!$item->getFirstMediaUrl('page')) ? '/backend/resimyok.jpg': $item->getFirstMediaUrl('page')}})"></span>
                         </td>
                         <td>
                             <div class="font-weight-medium">{{ $item->title }}</div>
@@ -76,7 +76,6 @@
                             </div>
                         </td>
                     </tr>
-
                     <div class="modal modal-blur fade" id="silmeonayi{{ $item->id }}" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog modal-sm" role="document">
                             <div class="modal-content">
@@ -105,7 +104,6 @@
                         </div>
                     </div>
                     @endforeach
-
                     </tbody>
                 </table>
             </div>
@@ -155,7 +153,7 @@
                     @foreach($Kategori  as $item)
                         <tr>
                             <td>
-                                <span class="avatar me-2" style="background-image: url({{$item->getFirstMediaUrl() }})"></span>
+                                <span class="avatar me-2" style="background-image: url({{ (!$item->getFirstMediaUrl('page')) ? '/backend/resimyok.jpg': $item->getFirstMediaUrl('page-categories')}})"></span>
                             </td>
                             <td>
                                 <div class="font-weight-medium">{{ $item->title }}</div>

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Spatie\Sitemap\SitemapGenerator;
 
     Auth::routes();
+
     Route::get('/sitemap', function(){
         SitemapGenerator::create(\route('home'))->writeToFile('sitemap.xml');
     });
@@ -45,4 +46,6 @@ use Spatie\Sitemap\SitemapGenerator;
         Route::auto('/contact', ContactController::class);
         Route::auto('/team', TeamController::class);
         Route::auto('/team-categories', TeamCategoryController::class);
+        Route::auto('/product', ProductController::class);
+        Route::auto('/product-categories', ProductCategoryController::class);
     });
