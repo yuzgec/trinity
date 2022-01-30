@@ -1,7 +1,15 @@
 <section class="footer_one bgc-black22 pb50">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-md-4 col-md-2 col-lg-2">
+
+            <div class="col-sm-6 col-md-4 col-md-3 col-lg-3">
+                <div class="footer_contact_widget home12">
+                    <h4>İLETİŞİM</h4>
+
+                    <p>{{ config('settings.adres1') }}.</p>
+                    <p>{{ config('settings.telefon1') }}</p>
+                    <p>{{ config('settings.email1') }}</p>
+                </div>
                 <div class="footer_contact_widget home12">
                     <img class="logo1 home7 img-fluid" src="/frontend/images/logo.png" alt="header-logo4.jpg" width="150px">
                 </div>
@@ -12,29 +20,20 @@
                         <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-md-2 col-lg-2">
-                <div class="footer_contact_widget home12">
-                    <h4>İLETİŞİM</h4>
-
-                    <p>{{ config('settings.adres1') }}.</p>
-                    <p>{{ config('settings.telefon1') }}</p>
-                    <p>{{ config('settings.email1') }}</p>
-                </div>
 
             </div>
-            <div class="col-sm-6 col-md-4 col-md-2 col-lg-2">
+            <div class="col-sm-6 col-md-4 col-md-3 col-lg-3">
                 <div class="footer_company_widget home12 pl30 pl0-lg">
                     <h4>KURUMSAL</h4>
                     <ul class="list-unstyled">
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i>Hakkımızda</a></li>
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i>Sertfikasyon</a></li>
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i>Eğitmenler</a></li>
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i>Video Galeri</a></li>
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i>Foto Galeri</a></li>
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i>Temsilci Ol</a></li>
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i>İ.K.</a></li>
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i>S.S.S</a></li>
+                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Hakkımızda</a></li>
+                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Sertfikasyon</a></li>
+                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Eğitmenler</a></li>
+                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Video Galeri</a></li>
+                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Foto Galeri</a></li>
+                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Temsilci Ol</a></li>
+                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> İ.K.</a></li>
+                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> S.S.S</a></li>
 
                     </ul>
                 </div>
@@ -49,7 +48,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-4 col-md-2 col-lg-2">
+            <div class="col-sm-6 col-md-4 col-md-3 col-lg-3">
                 <div class="footer_support_widget home12 style2 pl30 pl0-lg">
                     <h4>KİTAPLAR</h4>
                     <ul class="list-unstyled">
