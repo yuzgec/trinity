@@ -10,8 +10,8 @@
             <div class="row home7_row">
                 <div class="col-sm-6 col-lg-6"></div>
                 @foreach($Service_Categories as $item)
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="img_hvr_box home7 three" style="background-image: url(https://www.laternamuzikkursu.com/upload/slider/67keman-dersi-karsiyaka.jpg);">
+                    <div class="col-sm-6 col-lg-3" style="">
+                        <div class="img_hvr_box home7 three" style="background-image: url(https://www.laternamuzikkursu.com/upload/slider/67keman-dersi-karsiyaka.jpg);border:3px solid white">
                             <div class="overlay">
                                 <div class="details">
                                     <h4>{{ $item->title }}</h4>
@@ -22,49 +22,64 @@
                     </div>
                 @endforeach
             </div>
+
             <div class="row mt60">
+                <div class="col-lg-6 col-xl-6">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-6">
+                            <div class="home3_about_icon_box one">
+                                <span class="icon"><span class="flaticon-account"></span></span>
+                                <div class="details">
+                                    <h4>Create Account</h4>
+                                    <p>Sed cursus turpis vitae tortor donec eaque ipsa quaeab illo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-6">
+                            <div class="home3_about_icon_box two">
+                                <span class="icon"><span class="flaticon-online"></span></span>
+                                <div class="details">
+                                    <h4>Create Online Course</h4>
+                                    <p>Sed cursus turpis vitae tortor donec eaque ipsa quaeab illo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-6">
+                            <div class="home3_about_icon_box three">
+                                <span class="icon"><span class="flaticon-student-1"></span></span>
+                                <div class="details">
+                                    <h4>Interact with Students</h4>
+                                    <p>Sed cursus turpis vitae tortor donec eaque ipsa quaeab illo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-6">
+                            <div class="home3_about_icon_box four">
+                                <span class="icon"><span class="flaticon-employee"></span></span>
+                                <div class="details">
+                                    <h4>Achieve Your Goals</h4>
+                                    <p>Sed cursus turpis vitae tortor donec eaque ipsa quaeab illo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-lg-6">
                     <div class="about_box_home6">
                         <div class="details">
                             <h3>Trinity Türkiye Sınav Merkezi</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                             <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                             <a class="btn dbxshad btn-lg btn-thm2 rounded" href="#">Devamını Oku</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="about_box_home7">
-                        <div class="thumb"><img class="img-fluid img-rounded" src="/frontend/images/logob.png" alt="1.jpg"></div>
-                    </div>
-                </div>
+
             </div>
-            <div class="row mt40">
-                <div class="col-sm-6 col-lg-3">
-                    <div class="home_icon_box home6">
-                        <div class="icon"><span class="flaticon-student"></span></div>
-                        <p>Learn From The Experts</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="home_icon_box home6">
-                        <div class="icon"><span class="flaticon-book"></span></div>
-                        <p>Book Library & Store</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="home_icon_box home6">
-                        <div class="icon"><span class="flaticon-global"></span></div>
-                        <p>Worldwide Recognize</p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="home_icon_box home6">
-                        <div class="icon"><span class="flaticon-first"></span></div>
-                        <p>Best Industry Leaders</p>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </section>
 

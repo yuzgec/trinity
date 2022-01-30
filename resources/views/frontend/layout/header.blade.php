@@ -27,7 +27,7 @@
                 </button>
             </div>
             <a href="{{ route('home') }}" class="navbar_brand float-left dn-smd">
-                <img class="logo1 home7 img-fluid" src="/frontend/images/logob.png" alt="header-logo4.jpg" width="150px">
+                <img class="logo1 home7 img-fluid" src="/frontend/images/logob.png" alt="header-logo4.jpg" width="200px">
             </a>
             <div class="menu7_search home7 float-right">
                 <div class="search_overlay">

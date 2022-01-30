@@ -1,4 +1,3 @@
-<!-- 7th Home Slider -->
 <div class="home-seven home2-slider p0">
     <div class="container-fluid p0">
         <div class="row">
