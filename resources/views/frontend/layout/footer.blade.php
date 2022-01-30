@@ -27,14 +27,14 @@
                 <div class="footer_company_widget home12 pl30 pl0-lg">
                     <h4>KURUMSAL</h4>
                     <ul class="list-unstyled">
-                        <li><a href="page-blog-v1.html">Hakkımızda</a></li>
-                        <li><a href="page-blog-v1.html">Sertfikasyon</a></li>
-                        <li><a href="page-blog-v1.html">Eğitmenler</a></li>
-                        <li><a href="page-blog-v1.html">Video Galeri</a></li>
-                        <li><a href="page-blog-v1.html">Foto Galeri</a></li>
-                        <li><a href="page-blog-v1.html">Temsilci Ol</a></li>
-                        <li><a href="page-blog-v1.html">İ.K.</a></li>
-                        <li><a href="page-blog-v1.html">S.S.S</a></li>
+                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i>Hakkımızda</a></li>
+                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i>Sertfikasyon</a></li>
+                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i>Eğitmenler</a></li>
+                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i>Video Galeri</a></li>
+                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i>Foto Galeri</a></li>
+                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i>Temsilci Ol</a></li>
+                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i>İ.K.</a></li>
+                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i>S.S.S</a></li>
 
                     </ul>
                 </div>
@@ -44,7 +44,7 @@
                     <h4>SINAVLAR</h4>
                     <ul class="list-unstyled">
                         @foreach($Service as $item)
-                            <li><a href="#">{{ $item->title }} - ({{ $item->getCategory->title }})</a></li>
+                            <li><a href="#"><i class="flaticon-right-arrow-1 right"></i> {{ $item->title }} - ({{ $item->getCategory->title }})</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -54,7 +54,7 @@
                     <h4>KİTAPLAR</h4>
                     <ul class="list-unstyled">
                         @foreach($Service as $item)
-                            <li><a href="#">{{ $item->title }} - ({{ $item->getCategory->title }})</a></li>
+                            <li><a href="#"><i class="flaticon-right-arrow-1 right"></i> {{ $item->title }} - ({{ $item->getCategory->title }})</a></li>
                         @endforeach
                     </ul>
                 </div>

@@ -1,5 +1,8 @@
 @extends('frontend.layout.app')
 @section('content')
+    @section('header')
+        @include('frontend.layout.header')
+     @endsection
     @include('frontend.layout.slider')
 
     <section class="home7_about pt0 pb0">
@@ -12,6 +15,7 @@
                             <div class="overlay">
                                 <div class="details">
                                     <h4>{{ $item->title }}</h4>
+                                    <p>Trinity College London</p>
                                 </div>
                             </div>
                         </div>

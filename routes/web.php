@@ -11,14 +11,17 @@ use Spatie\Sitemap\SitemapGenerator;
     });
 
     Route::get('/', 'HomeController@index')->name('home');
-    Route::get('/sinav/{url?}', 'HomeController@index')->name('sinav.detay');
-    Route::get('/blog/{url?}', 'HomeController@index')->name('home');
-    Route::get('/kurumsal/{url?}', 'HomeController@index')->name('home');
-    Route::get('/kitap/{url?}', 'HomeController@index')->name('home');
-    Route::get('/video/{url?}', 'HomeController@index')->name('home');
-    Route::get('/video/', 'HomeController@index')->name('video');
-    Route::get('/galeri/{url?}', 'HomeController@index')->name('home');
-    Route::get('/galeri/', 'HomeController@index')->name('galeri');
+    Route::get('/sinav-kategori/{url?}', 'HomeController@sinavKategori')->name('sinav.kategori');
+    Route::get('/sinav/{url?}', 'HomeController@sinavDetay')->name('sinav.detay');
+    Route::get('/blog/{kategori?}/{url?}', 'HomeController@blogDetay')->name('blog.detay');
+    Route::get('/blog/{kategori?}', 'HomeController@blogKategori')->name('blog.kategori');
+    Route::get('/kurumsal/{url?}', 'HomeController@kurumsalDetay')->name('kurumsal.detay');
+    Route::get('/kitap/{url?}', 'HomeController@kitapDetay')->name('kitap.detay');
+    Route::get('/kitap-kategori/{url?}', 'HomeController@kitapKategori')->name('kitap.kategori');
+    Route::get('/video/{url?}', 'HomeController@videoDetay')->name('video.detay');
+    Route::get('/video/', 'HomeController@videoKategori')->name('video');
+    Route::get('/galeri/{url?}', 'HomeController@galeriDetay')->name('galeri.detay');
+    Route::get('/galeri/', 'HomeController@galeriKategori')->name('galeri');
     Route::get('/iletisim', 'HomeController@iletisim')->name('iletisim');
 
     Route::group(["prefix"=>"go", 'middleware' => ['auth']],function() {

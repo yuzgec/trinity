@@ -14,13 +14,59 @@ class HomeController extends Controller
         return view('frontend.index', compact('Show'));
     }
 
-    public function getKurumsal(){
+
+    public function sinavKategori(){
 
     }
 
-    public function getService(){
+    public function sinavDetay(){
+
 
     }
+
+    public function kitapKategori(){
+
+    }
+
+    public function kitapDetay(){
+
+
+    }
+
+    public function videoDetay(){
+
+
+    }
+
+    public function videoKategori(){
+
+
+    }
+
+    public function galeriDetay(){
+
+
+    }
+    public function galeriKategori(){
+
+
+    }
+
+    public function blogDetay(){
+
+
+    }
+    public function blogKategori(){
+
+
+    }
+
+    public function kurumsalDetay(){
+
+
+    }
+
+
 
     public function iletisim(){
         return view('frontend.iletisim');

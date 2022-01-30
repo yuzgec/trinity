@@ -11,7 +11,9 @@
 <body>
 <div class="wrapper">
     @include('frontend.layout.loader')
-    @include('frontend.layout.header')
+
+    @yield('header')
+
     @yield('content')
     @include('frontend.layout.footer')
 </div>
