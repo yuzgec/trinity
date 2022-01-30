@@ -1,3 +1,19 @@
-<script src="/frontend/js/vendor.js"></script>
-<script src="/frontend/js/counter.js"></script>
-<script src="/frontend/js/main.js"></script>
+<script type="text/javascript" src="/frontend/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/frontend/js/jquery-migrate-3.0.0.min.js"></script>
+<script type="text/javascript" src="/frontend/js/popper.min.js"></script>
+<script type="text/javascript" src="/frontend/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/frontend/js/jquery.mmenu.all.js"></script>
+<script type="text/javascript" src="/frontend/js/ace-responsive-menu.js"></script>
+<script type="text/javascript" src="/frontend/js/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="/frontend/js/isotop.js"></script>
+<script type="text/javascript" src="/frontend/js/snackbar.min.js"></script>
+<script type="text/javascript" src="/frontend/js/simplebar.js"></script>
+<script type="text/javascript" src="/frontend/js/parallax.js"></script>
+<script type="text/javascript" src="/frontend/js/scrollto.js"></script>
+<script type="text/javascript" src="/frontend/js/jquery-scrolltofixed-min.js"></script>
+<script type="text/javascript" src="/frontend/js/jquery.counterup.js"></script>
+<script type="text/javascript" src="/frontend/js/wow.min.js"></script>
+<script type="text/javascript" src="/frontend/js/progressbar.js"></script>
+<script type="text/javascript" src="/frontend/js/slider.js"></script>
+<script type="text/javascript" src="/frontend/js/timepicker.js"></script>
+<script type="text/javascript" src="/frontend/js/script.js"></script>

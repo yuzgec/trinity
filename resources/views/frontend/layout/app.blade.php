@@ -10,15 +10,15 @@
 
 </head>
 <body>
+<div class="wrapper">
+    @include('frontend.layout.loader')
+    @include('frontend.layout.header')
+    @yield('content')
 
-@include('frontend.layout.loader')
-@include('frontend.layout.header')
 
-@yield('content')
-
-
-@include('frontend.layout.footer')
-@include('frontend.layout.js')
+    @include('frontend.layout.footer')
+</div>
+    @include('frontend.layout.js')
 
 </body>
 </html>

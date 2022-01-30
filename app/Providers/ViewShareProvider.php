@@ -37,7 +37,7 @@ class ViewShareProvider extends ServiceProvider
             $Pages = Page::all();
             $Page_Categories = PageCategory::all();
             $Service_Categories =  ServiceCategory::all();
-            $Service = Service::all();
+            $Service = Service::with('getCategory')->get();
             $Blog =  Blog::all();
             //dd($Service);
             View::share([

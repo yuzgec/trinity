@@ -2,317 +2,124 @@
 @section('content')
     @include('frontend.layout.slider')
 
-    <div class="counter-area">
+    <section class="home7_about pt0 pb0">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="single-quote-inner">
-                        <div class="thumb text-right">
-                            <img src="/frontend/img/banner2.jpg" alt="img">
+            <div class="row home7_row">
+                <div class="col-sm-6 col-lg-6"></div>
+                @foreach($Service_Categories as $item)
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="img_hvr_box home7 three" style="background-image: url(images/service/7.jpg);">
+                            <div class="overlay">
+                                <div class="details">
+                                    <h4>{{ $item->title }}</h4>
+                                </div>
+                            </div>
                         </div>
-
+                    </div>
+                @endforeach
+            </div>
+            <div class="row mt60">
+                <div class="col-lg-6">
+                    <div class="about_box_home6">
+                        <div class="details">
+                            <h3>Trinity Türkiye Sınav Merkezi</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <a class="btn dbxshad btn-lg btn-thm2 rounded" href="#">Devamını Oku</a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-lg-8 pd-top-90">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="single-counter-inner after-bg">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <div class="thumb">
-                                            <img src="/frontend/img/icon/1.png" alt="img">
-                                        </div>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="details">
-                                            <h2><span class="counter">89</span></h2>
-                                            <p>Sertfika Sayısı</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="single-counter-inner after-bg">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <div class="thumb">
-                                            <img src="/frontend/img/icon/2.png" alt="img">
-                                        </div>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="details">
-                                            <h2><span class="counter">43</span></h2>
-                                            <p>Sınav Sayısı</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="single-counter-inner after-bg">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <div class="thumb">
-                                            <img src="/frontend/img/icon/3.png" alt="img">
-                                        </div>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="details">
-                                            <h2><span class="counter">35</span></h2>
-                                            <p>Eğitmen Sayısı</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-lg-6">
+                    <div class="about_box_home7">
+                        <div class="thumb"><img class="img-fluid img-rounded" src="/frontend/images/logob.png" alt="1.jpg"></div>
                     </div>
-                    <div class="block-area">
-                        <div class="row">
-                            @foreach($Service_Categories as $item)
-                                <div class="col-md-6">
-                                    <div class="single-block-inner" style="background-image: url('/frontend/img/jazz.jpg');">
-                                        <div class="cat"></div>
-                                        <h4 class="mt-5">{{ $item->title }}</h4>
+                </div>
+            </div>
+            <div class="row mt40">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="home_icon_box home6">
+                        <div class="icon"><span class="flaticon-student"></span></div>
+                        <p>Learn From The Experts</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="home_icon_box home6">
+                        <div class="icon"><span class="flaticon-book"></span></div>
+                        <p>Book Library & Store</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="home_icon_box home6">
+                        <div class="icon"><span class="flaticon-global"></span></div>
+                        <p>Worldwide Recognize</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="home_icon_box home6">
+                        <div class="icon"><span class="flaticon-first"></span></div>
+                        <p>Best Industry Leaders</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Top Courses -->
+    <section id="top-courses" class="top-courses pb30">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="main-title text-center">
+                        <h3 class="mt0">Browse Our Top Courses</h3>
+                        <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="options" class="alpha-pag full">
+                        <div class="option-isotop">
+                            <ul id="filter" class="option-set" data-option-key="filter">
+                                <li class="list-inline-item"><a href="#all" data-option-value="*" class="selected">Hepsini Göster</a></li>
+                                @foreach($Service_Categories as $item)
+                                    <li class="list-inline-item"><a href="#{{ $item->slug }}" data-option-value=".{{ $item->slug }}">{{ $item->title }}</a></li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div><!-- FILTER BUTTONS -->
+                    <div class="emply-text-sec">
+                        <div class="row" id="masonry_abc">
+                            @foreach($Service as $row)
+                            <div class="col-md-6 col-lg-4 col-xl-3 {{ $row->getCategory->slug }}">
+                                <div class="top_courses">
+                                    <div class="thumb">
+                                        <img class="img-whp" src="images/courses/t1.jpg" alt="t1.jpg">
+                                        <div class="overlay">
+                                            <a class="tc_preview_course" href="#">İncele</a>
+                                        </div>
+                                    </div>
+                                    <div class="details">
+                                        <div class="tc_content">
+                                            <p>{{ $row->getCategory->title }}</p>
+                                            <h5>{{ $row->title }}</h5>
+                                        </div>
+                                        <div class="tc_footer">
+
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
                             @endforeach
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="about-area pd-top-90 pd-bottom-90">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-sm-6 mt-lg-5">
-                            <div class="thumb about-thumb  wow animated zoomIn" data-wow-duration="0.8s" data-wow-delay="0.1s">
-                                <img src="https://picsum.photos/300/300?random=1" alt="img">
-                            </div>
-                            <div class="thumb about-thumb  wow animated zoomIn" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                                <img src="https://picsum.photos/300/300?random=2" alt="img">
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="thumb about-thumb  wow animated zoomIn" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                                <img src="https://picsum.photos/300/300?random=3" alt="img">
-                            </div>
-                            <div class="thumb about-thumb  wow animated zoomIn" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                                <img src="https://picsum.photos/300/300?random=4" alt="img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 align-self-center mt-4 mt-lg-0">
-                    <div class="section-title style-bg mb-0">
-                        <h5 class="sub-title">Who we are</h5>
-                        <h2 class="title">Trinity College London
-                            Laterna Müzik Kursu</h2>
-                        <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dicta dolore nemo. Nisi, veritatis deleniti incidunt unde aliquam doloribus quae dolorem atque. Suscipit animi, laboriosam consequatur nobis vel nulla. Tempora. </p>
-                        <div class="single-list-inner mt-4">
-                            <ul>
-                                <li><i class="fa fa-check"></i> Lorem ipsum dolor sit amet consectetur.</li>
-                                <li><i class="fa fa-check"></i> Lorem ipsum dolor sit amet consectetur.</li>
-                                <li><i class="fa fa-check"></i> Lorem ipsum dolor sit amet consectetur.</li>
-                                <li><i class="fa fa-check"></i> Lorem ipsum dolor sit amet consectetur.</li>
-                                <li><i class="fa fa-check"></i> Lorem ipsum dolor sit amet consectetur.</li>
-                                <li><i class="fa fa-check"></i> Lorem ipsum dolor sit amet consectetur.</li>
-                                <li><i class="fa fa-check"></i> Lorem ipsum dolor sit amet consectetur.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="call-to-action-area bg-cover pd-top-110 pd-bottom-120" style="background-image: url('/frontend/img/other/3.png');">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-7 col-lg-10">
-                    <div class="section-title mb-0 style-white">
-                        <h2 class="title">Trinity College London <br>İzmir Laterna Müzik Kursu</h2>
-                        <a class="btn btn-black" href="/trinity">Şubelerimiz</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('frontend.layout.temsilcilik-ara')
 
-    <div class="team-area pd-top-90 pd-bottom-60">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title text-center">
-                        <h5 class="sub-title">Trinity College London Türkiye</h5>
-                        <h2 class="title">Eğitmenlerimiz</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-team-inner">
-                        <div class="thumb">
-                            <img src="https://picsum.photos/365/430?random=1" alt="img">
-                        </div>
-                        <div class="details pt-5">
-                            <h5><a href="/trinity">Gökçer Başar</a> <span>  -  Keman</span></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-team-inner">
-                        <div class="thumb">
-                            <img src="https://picsum.photos/365/430?random=1" alt="img">
-                        </div>
-                        <div class="details pt-5">
-                            <h5><a href="/trinity">Gökçer Başar</a> <span>  -  Keman</span></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-team-inner">
-                        <div class="thumb">
-                            <img src="https://picsum.photos/365/430?random=1" alt="img">
-                        </div>
-                        <div class="details pt-5">
-                            <h5><a href="/trinity">Gökçer Başar</a> <span>  -  Keman</span></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="event-area mg-bottom-120">
-        <div class="container">
-            <div class="row no-gutters">
-                <div class="col-xl-7 col-lg-6 bg-overlay bg-cover" style="background-image: url('/frontend/img/other/4.png');">
-                    <div class="event-section-title">
-                        <div class="section-title mb-0 pt-xl-5 style-white">
-                            <h5 class="sub-title">Son Sınav Etkinlikleri</h5>
-                            <h2 class="title">Book your sit on going latest events</h2>
-                            <a class="btn btn-border-white" href="event.html">Tüm Sınavlarımız</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-lg-6">
-                    <div class="event-area-inner bg-base">
-                        <div class="single-event-inner style-white">
-                            <div class="media">
-                                <div class="media-left">
-                                    <i class="fa fa-users"></i>
-                                    <div class="thumb">
-                                        <img src="/frontend/img/event/1.png" alt="img">
-                                    </div>
-                                </div>
-                                <div class="details media-body align-self-center">
-                                    <div class="date"><i class="fa fa-calendar"></i> 09 Dec, 2021</div>
-                                    <p class="location"><i class="fa fa-map-marker"></i>New york grand city 1247</p>
-                                    <h5><a href="single-event.html">Conference for reducing global warming</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-event-inner style-white mb-0">
-                            <div class="media">
-                                <div class="media-left">
-                                    <i class="fa fa-users"></i>
-                                    <div class="thumb">
-                                        <img src="/frontend/img/event/2.png" alt="img">
-                                    </div>
-                                </div>
-                                <div class="details media-body align-self-center">
-                                    <div class="date"><i class="fa fa-calendar"></i> 2 Dec, 2021</div>
-                                    <p class="location"><i class="fa fa-map-marker"></i>New york grand city 1247</p>
-                                    <h5><a href="single-event.html">Global Conference for reducing warming</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="blog-area pd-top-60 mb-5 pb-3">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6 col-lg-7 col-md-11">
-                    <div class="section-title text-center">
-                        <h5 class="sub-title">Trinity London College </h5>
-                        <h2 class="title">Haberler - Duyurular</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-inner">
-                        <div class="thumb">
-                            <a href="/trinity">
-                                <img src="/frontend/img/blog/01.png" alt="img">
-                            </a>
-                        </div>
-                        <div class="details">
-                            <div class="blog-meta">
-                                <ul>
-                                    <li class="comnt bg-base">Community</li>
-                                    <li class="author">By <span>Adam Mortin</span></li>
-                                    <li class="date">1 Kasım 2019</li>
-                                </ul>
-                            </div>
-                            <h4><a href="/trinity">Engage your ommunity like never before</a></h4>
-                            <a class="readmore-text" href="/trinity">Devamını Oku</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-inner">
-                        <div class="thumb">
-                            <a href="/trinity">
-                                <img src="/frontend/img/blog/02.png" alt="img">
-                            </a>
-                        </div>
-                        <div class="details">
-                            <div class="blog-meta">
-                                <ul>
-                                    <li class="comnt bg-red">Community</li>
-                                    <li class="author">By <span>Mortin Joe</span></li>
-                                    <li class="date">1 Kasım 2019</li>
-                                </ul>
-                            </div>
-                            <h4><a href="/trinity">Community like never before Engage your </a></h4>
-                            <a class="readmore-text" href="/trinity">Devamını Oku</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-inner">
-                        <div class="thumb">
-                            <a href="/trinity">
-                                <img src="/frontend/img/blog/03.png" alt="img">
-                            </a>
-                        </div>
-                        <div class="details">
-                            <div class="blog-meta">
-                                <ul>
-                                    <li class="comnt bg-blue">Community</li>
-                                    <li class="author">By <span>John Joe</span></li>
-                                    <li class="date">1 Kasım 2019</li>
-                                </ul>
-                            </div>
-                            <h4><a href="/trinity">Mortin your ommunity like Ever Article</a></h4>
-                            <a class="readmore-text" href="/trinity">Devamını Oku</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     @endsection

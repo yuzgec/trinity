@@ -1,113 +1,114 @@
-<div class="td-search-popup" id="td-search-popup">
-    <form action="index.html" class="search-form">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Arama.....">
-        </div>
-        <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
-    </form>
-</div>
-<div class="body-overlay" id="body-overlay"></div>
-<div class="navbar-area">
-    <div class="navbar-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 align-self-center text-md-left text-center">
-                    <ul>
-                        <li class="d-none d-md-inline-block">
-                            <p>
-                                <i class="fa fa-envelope-o"></i>
-                                {{config('settings.email1')}}
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-6">
-                    <ul class="text-right">
-                        <li class="d-lg-inline-block d-none"><p><i class="fa fa-info-circle"></i> Duyuru & Haberler</p></li>
-                        <li class="d-lg-inline-block d-none"><p><i class="fa fa-briefcase"></i> Yardım</p></li>
-                    </ul>
-                </div>
+<div class="header_top home7">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-xl-5"></div>
+            <div class="col-lg-7 col-xl-7">
+                <ul class="sign_up_btn home7 dn-smd text-right">
+                    <li class="list-inline-item"><a class="light_white" href="#">{{ config('settings.telefon1') }}</a></li>
+                    <li class="list-inline-item"><a class="light_white" href="#">{{ config('settings.email1') }}</a></li>
+                    <li class="list-inline-item"><a class="light_white" href="#">S.S.S</a></li>
+                    <li class="list-inline-item"><a class="light_white" href="#">Yardım</a></li>
+                    <li class="list-inline-item"><a class="light_white" href="#">Temsilci Ol</a></li>
+                </ul>
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-area-1 navbar-area navbar-expand-lg">
-        <div class="container nav-container">
-            <div class="responsive-mobile-menu">
-                <button class="menu toggle-btn d-block d-lg-none" data-target="#edumint_main_menu"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="icon-left"></span>
-                    <span class="icon-right"></span>
+</div>
+
+<header class="header-nav menu_style_home_seven main-menu">
+    <div class="container">
+        <nav>
+            <div class="menu-toggle">
+                <img class="nav_logo_img img-fluid" src="/frontend/images/logob.png" alt="header-logo2.png">
+                <button type="button" id="menu-btn">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
             </div>
-            <div class="logo">
-                <a href="{{ route('home') }}"><img src="/frontend/img/logo.png" alt="img"></a>
+            <a href="{{ route('home') }}" class="navbar_brand float-left dn-smd">
+                <img class="logo1 home7 img-fluid" src="/frontend/images/logob.png" alt="header-logo4.jpg" width="200px">
+            </a>
+            <div class="menu7_search home7 float-right">
+                <div class="search_overlay">
+                    <a id="search-button-listener" class="mk-search-trigger mk-fullscreen-trigger" href="#">
+                        <span id="search-button"><i class="flaticon-magnifying-glass"></i></span>
+                    </a>
+                    <div class="mk-fullscreen-search-overlay" id="mk-search-overlay">
+                        <a href="#" class="mk-fullscreen-close" id="mk-fullscreen-close-button"><i class="fa fa-times"></i></a>
+                        <div id="mk-fullscreen-search-wrapper">
+                            <form method="get" id="mk-fullscreen-searchform">
+                                <input type="text" value="" placeholder="Kurs veya Kitap Arayınız..." id="mk-fullscreen-search-input">
+                                <i class="flaticon-magnifying-glass fullscreen-search-icon"><input value="" type="submit"></i>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="nav-left-part nav-right-part-desktop">
-                <label class="single-input-inner right-side-icon">
-                    <input type="text" placeholder="Arama">
-                    <i class="fa fa-search" style="font-size: 20px"></i>
-                </label>
-            </div>
-            <div class="nav-right-part nav-right-part-mobile">
-                <a class="search-bar-btn" href="#"><i class="fa fa-search" style="margin-top:-15px"></i></a>
-            </div>
-            <div class="collapse navbar-collapse" id="edumint_main_menu">
-                <ul class="navbar-nav menu-open">
-                    <li><a href="{{ route('home') }}">Anasayfa</a></li>
-                    <li class="menu-item-has-children current-menu-item">
-                        <a href="#">Kurumsal</a>
-                        <ul class="sub-menu">
-                            <li><a href="{{ route('home') }}">Hakkımızda</a></li>
-                            <li><a href="{{ route('home') }}">Bayilikler</a></li>
-                            <li><a href="{{ route('home') }}">S.S.S.</a></li>
-                            <li><a href="{{ route('home') }}">Eğitmenler</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Sınavlarımız</a>
-                        <ul class="sub-menu">
-                             @foreach($Service_Categories as $item)
-                            <li><a href="{{ route('home') }}"><b>{{ $item->title }}</b></a></li>
-                                @foreach($Service->where('category' , $item->id) as $service)
-                                    <li><a href="{{ route('home') }}">{{ $service->title }}</a></li>
+
+            <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
+                <li class="last">
+                    <a href="{{route('iletisim')}}"><span class="title">Bize Ulaşın</span></a>
+                </li>
+                <li class="list_five">
+                    <a href="#"><span class="title">Galeri</span></a>
+                    <ul>
+                        <li>
+                            <a href="#"><span class="title">Video Galeri</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="title">Foto Galeri</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list_four">
+                    <a href="#"><span class="title">Kurumsal</span></a>
+                    <ul>
+                        <li><a href="page-blog-v1.html">Hakkımızda</a></li>
+                        <li><a href="page-blog-v1.html">Sertfikasyon</a></li>
+                        <li><a href="page-blog-v1.html">Eğitmenler</a></li>
+                        <li><a href="page-blog-v1.html">Temsilci Ol</a></li>
+                        <li><a href="page-blog-v1.html">İ.K.</a></li>
+                        <li><a href="page-blog-v1.html">S.S.S</a></li>
+                    </ul>
+                </li>
+                <li class="list_three">
+                    <a href="#"><span class="title">Kitaplar</span></a>
+                    <ul>
+                        @foreach($Service_Categories as $item)
+
+                            <li>
+                                <a href="#">{{ $item->title  }}</a>
+                                <ul>
+                                    @foreach($Service->where('category', $item->id) as $row)
+                                        <li><a href="page-course-v1.html">{{ $row->title }}</a></li>
+                                    @endforeach
+                                </ul>
+                            </li>
+                        @endforeach
+                    </ul>
+                </li>
+                <li class="list_two">
+                    <a href="#"><span class="title">Sınavlar</span></a>
+                    <ul>
+                        @foreach($Service_Categories as $item)
+
+                        <li>
+                            <a href="#">{{ $item->title  }}</a>
+                            <ul>
+                                @foreach($Service->where('category', $item->id) as $row)
+                                <li><a href="page-course-v1.html">{{ $row->title }}</a></li>
                                 @endforeach
-                            @endforeach
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Kitaplar</a>
-                        <ul class="sub-menu">
-                            <li><a href="{{ route('home') }}"><b>Klasik Jazz</b></a></li>
-                            <li><a href="{{ route('home') }}">Piano</a></li>
-                            <li><a href="{{ route('home') }}">Piano</a></li>
-                            <li><a href="{{ route('home') }}">Piano</a></li>
-                            <li><a href="{{ route('home') }}">Piano</a></li>
-                            <li><a href="{{ route('home') }}">Piano</a></li>
-                            <li><a href="{{ route('home') }}">Piano</a></li>
-                            <li><a href="{{ route('home') }}">Piano</a></li>
-                            <li><a href="{{ route('home') }}"><b>Pop & Rock</b></a></li>
-                            <li><a href="{{ route('home') }}">Piano</a></li>
-                            <li><a href="{{ route('home') }}">Piano</a></li>
-                            <li><a href="{{ route('home') }}">Piano</a></li>
-                            <li><a href="{{ route('home') }}">Piano</a></li>
-                            <li><a href="{{ route('home') }}">Piano</a></li>
-                            <li><a href="{{ route('home') }}">Piano</a></li>
-                            <li><a href="{{ route('home') }}">Piano</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="{{ route('home') }}">Haberler</a></li>
+                            </ul>
+                        </li>
+                        @endforeach
+                    </ul>
 
-                    <li class="menu-item-has-children">
-                        <a href="#">Galeri</a>
-                        <ul class="sub-menu">
-                            <li><a href="{{ route('galeri') }}">Foto Galeri</a></li>
-                            <li><a href="{{ route('video') }}">Video Galeri</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="{{ route('iletisim') }}">İletişim</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </nav>
-</div>
+                </li>
+                <li class="list_one">
+                    <a href="{{ route('home') }}"><span class="title">Anasayfa</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
