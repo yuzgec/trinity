@@ -1,7 +1,5 @@
-<!-- Main Header Nav -->
 <header class="header-nav menu_style_home_one new_style bgc-white navbar-scrolltofixed stricky main-menu">
-    <div class="container-fluid">
-
+    <div class="container">
         <nav>
             <div class="menu-toggle">
                 <img class="nav_logo_img img-fluid" src="/frontend/images/logo2.png" alt="header-logo.png">
@@ -23,7 +21,6 @@
                     <a href="#"><span class="title">Sınavlar</span></a>
                     <ul>
                         @foreach($Service_Categories as $item)
-
                             <li>
                                 <a href="#">{{ $item->title  }}</a>
                                 <ul>
@@ -39,7 +36,6 @@
                     <a href="#"><span class="title">Kitaplar</span></a>
                     <ul>
                         @foreach($Service_Categories as $item)
-
                             <li>
                                 <a href="#">{{ $item->title  }}</a>
                                 <ul>
@@ -55,10 +51,10 @@
                     <a href="#"><span class="title">Galeri</span></a>
                     <ul>
                         <li>
-                            <a href="#"><span class="title">Video Galeri</span></a>
+                            <a href="{{ route('video') }}"><span class="title">Video Galeri</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="title">Foto Galeri</span></a>
+                            <a href="{{ route('galeri') }}"><span class="title">Foto Galeri</span></a>
                         </li>
                     </ul>
                 </li>

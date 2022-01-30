@@ -4,23 +4,21 @@
         @include('frontend.layout.header2')
     @endsection
 
-
-<!-- Inner Page Breadcrumb -->
-<section class="inner_page_breadcrumb style2 blog_grid_bg_color" style="background-image: url('https://www.laternamuzikkursu.com/upload/slider/67keman-dersi-karsiyaka.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-6 offset-xl-3 text-center">
-                <div class="breadcrumb_content">
-                    <h4 class="breadcrumb_title">Bize Ulaşın</h4>
-                    <ol class="d-flex align-items-center justify-content-center">
-                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Anasayfa</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Bize Ulaşın</li>
-                    </ol>
+    <section class="inner_page_breadcrumb style2 blog_grid_bg_color" style="background-image: url('https://www.laternamuzikkursu.com/upload/slider/67keman-dersi-karsiyaka.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 offset-xl-3 text-center">
+                    <div class="breadcrumb_content">
+                        <h4 class="breadcrumb_title">Bize Ulaşın</h4>
+                        <ol class="d-flex align-items-center justify-content-center">
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Anasayfa</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Bize Ulaşın</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
