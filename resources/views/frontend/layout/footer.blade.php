@@ -30,9 +30,12 @@
                         <li><a href="page-blog-v1.html">Hakkımızda</a></li>
                         <li><a href="page-blog-v1.html">Sertfikasyon</a></li>
                         <li><a href="page-blog-v1.html">Eğitmenler</a></li>
+                        <li><a href="page-blog-v1.html">Video Galeri</a></li>
+                        <li><a href="page-blog-v1.html">Foto Galeri</a></li>
                         <li><a href="page-blog-v1.html">Temsilci Ol</a></li>
                         <li><a href="page-blog-v1.html">İ.K.</a></li>
                         <li><a href="page-blog-v1.html">S.S.S</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -41,7 +44,7 @@
                     <h4>SINAVLAR</h4>
                     <ul class="list-unstyled">
                         @foreach($Service as $item)
-                        <li><a href="#">{{ $item->title }} - ({{ $item->getCategory->title }})</a></li>
+                            <li><a href="#">{{ $item->title }} - ({{ $item->getCategory->title }})</a></li>
                         @endforeach
                     </ul>
                 </div>
@@ -50,10 +53,9 @@
                 <div class="footer_support_widget home12 style2 pl30 pl0-lg">
                     <h4>KİTAPLAR</h4>
                     <ul class="list-unstyled">
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Forums</a></li>
-                        <li><a href="#">Language Packs</a></li>
-                        <li><a href="#">Release Status</a></li>
+                        @foreach($Service as $item)
+                            <li><a href="#">{{ $item->title }} - ({{ $item->getCategory->title }})</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

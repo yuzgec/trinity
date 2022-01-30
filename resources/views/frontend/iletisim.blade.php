@@ -55,7 +55,7 @@
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">YMesajınız</label>
+                                    <label for="exampleInputEmail1">Mesajınız</label>
                                     <textarea id="form_message" name="form_message" class="form-control required" rows="5" required="required"></textarea>
                                 </div>
                                 <div class="form-group ui_kit_button mb0">
@@ -68,5 +68,4 @@
             </div>
         </div>
     </section>
-
     @endsection

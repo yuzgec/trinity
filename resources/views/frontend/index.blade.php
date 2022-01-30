@@ -8,7 +8,7 @@
                 <div class="col-sm-6 col-lg-6"></div>
                 @foreach($Service_Categories as $item)
                     <div class="col-sm-6 col-lg-3">
-                        <div class="img_hvr_box home7 three" style="background-image: url(images/service/7.jpg);">
+                        <div class="img_hvr_box home7 three" style="background-image: url(https://www.laternamuzikkursu.com/upload/slider/67keman-dersi-karsiyaka.jpg);">
                             <div class="overlay">
                                 <div class="details">
                                     <h4>{{ $item->title }}</h4>

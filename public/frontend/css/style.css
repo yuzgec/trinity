@@ -191,11 +191,6 @@ iframe {
   color: #ffffff;
   text-shadow: none; }
 
-::-webkit-selection {
-  /* Safari */
-  background: #222222;
-  color: #ffffff;
-  text-shadow: none; }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -1686,7 +1681,7 @@ header.header-nav.menu_style_home_four.stricky-fixed{
     -o-box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
     box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
 }
-}
+
 header.header-nav.menu_style_home_four.stricky-fixed a.navbar_brand span{
   color: #0a0a0a;
 }
@@ -1875,9 +1870,7 @@ header.header-nav.menu_style_home_five.home11 .header_search_widget .mailchimp_f
   border-radius: 4px;
   width: 300px;
 }
-header.header-nav.menu_style_home_five.home11 .header_search_widget .mailchimp_form .form-control:placeholder{
-  color: #555;
-}
+
 header.header-nav.menu_style_home_five .ht_left_widget.home5 .cd-dropdown-trigger{
   background-color: #0a0a0a;
   color: #ffffff;
@@ -2250,9 +2243,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
   background-color: #ffeac1;
   border-radius: 8px;
 }
-.search_box_home4.home10 .header_search_widget .mailchimp_form .form-control:placeholder{
-  color: #212121;
-}
+
 .search_box_home4.home10 .header_search_widget .mailchimp_form button{
   background-color: #ffeac1;
   border-radius: 0;
@@ -2400,7 +2391,6 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
 }
 .main-banner-wrapper .carousel-btn-block .carousel-btn span.left,
 .main-banner-wrapper .carousel-btn-block .carousel-btn span.right{
-  display: -webkit-inline-box;
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   position: relative;
@@ -4406,18 +4396,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
 .my_course_content_list .mc_content_list:last-child{
   border-bottom: none;
 }
-.my_course_content_list .mc_content_list .thumb{
-  display: -webkit-inline-flex;
-  display: -moz-inline-flex;
-  display: -ms-inline-flex;
-  display: -o-inline-flex;
-  display: inline-flex;
-  margin-right: 20px;
-  min-height: 150px;
-  min-width: 250px;
-  overflow: hidden;
-  position: relative;
-}
+
 .my_course_content_list .mc_content_list .thumb .overlay{
   background-color: rgba(0,0,0, .5);
   border-radius: 5px;
@@ -5370,15 +5349,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
 .inner_page_breadcrumb.csv3 .breadcrumb_content{
   margin-top: 100px;
 }
-.inner_page_breadcrumb .breadcrumb_content .breadcrumb {
-  background-color: transparent;
-  display: -webkit-inline-flex;
-  display: -moz-inline-flex;
-  display: -ms-inline-flex;
-  display: -o-inline-flex;
-  display: inline-flex;
-  padding-top: 5px;
-}
+
 .inner_page_breadcrumb .breadcrumb_title {
   color: #ffffff;
   font-size: 35px;
@@ -7208,9 +7179,7 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
   margin-right: 5px;
   width: 100px;
 }
-.ui_kit_tooltip .btn:hover {
-  color:
-}
+
 .ui_kit_tooltip .btn:focus {
   box-shadow: none;
   border-color: #dddddd;
@@ -10650,19 +10619,7 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
   border: 2px solid;
   border-color: #2441e7;
 }
-.btn-transparent2 {
-  background-color: transparent;
-  border-color: -webkit-linear-gradient(30deg, rgb(69, 104, 220) 0%, rgb(123, 105, 199) 50%, rgb(176, 106, 179) 100%);
-  border-color: -o-linear-gradient(30deg, rgb(69, 104, 220) 0%, rgb(123, 105, 199) 50%, rgb(176, 106, 179) 100%);
-  border-color: -ms-linear-gradient(30deg, rgb(69, 104, 220) 0%, rgb(123, 105, 199) 50%, rgb(176, 106, 179) 100%);
-  border-color: -moz-linear-gradient(30deg, rgb(69, 104, 220) 0%, rgb(123, 105, 199) 50%, rgb(176, 106, 179) 100%);
-  border-color: linear-gradient(60deg, rgb(69, 104, 220) 0%, rgb(123, 105, 199) 50%, rgb(176, 106, 179) 100%);
-  color: #4568dc;
-  border-radius: 0px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
+
 .btn-transparent2:hover, .btn-transparent2:active, .btn-transparent2:focus {
   background: -webkit-linear-gradient(30deg, rgb(69, 104, 220) 0%, rgb(123, 105, 199) 50%, rgb(176, 106, 179) 100%);
   background: -o-linear-gradient(30deg, rgb(69, 104, 220) 0%, rgb(123, 105, 199) 50%, rgb(176, 106, 179) 100%);
@@ -11455,10 +11412,9 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
   margin-top: -30px;}
 
 .mr0 {
-  margin-right: 0px !important; }
+  margin-right: 0px !important;
+}
 
-.ulockd-mrgb35 {
-  margin-right: 5px; }
 
 .mr10 {
   margin-right: 10px; }
@@ -11580,52 +11536,7 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
 .zi-1 {
   z-index: -1;
 }
-/*== BackGround Images ==*/
-.bg-img2 {
-  background-image: url("../images/background/2.jpg");
-}
-.bg-img5 {
-  background-attachment: scroll;
-  background-image: url("../images/background/5.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 650px;
-}
-.bg-img6 {
-  background-attachment: scroll;
-  background-image: url("../images/background/8.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 960px;
-}
-.bg-img9 {
-  background-attachment: scroll;
-  background-image: url("../images/background/9.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.bg-img10 {
-  background-attachment: scroll;
-  background-image: url("../images/background/10.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.bg-img11 {
-  background-attachment: scroll;
-  background-image: url("../images/background/11.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.bg-img12 {
-  background-attachment: scroll;
-  background-image: url("../images/background/12.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .login-bg{
   background-attachment: scroll;
   background-image: url("../images/background/log-page-bg.jpg");
