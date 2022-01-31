@@ -21,8 +21,6 @@
     </div>
 </section>
 
-
-<!-- Top Courses -->
 <section id="top-courses" class="top-courses pb30">
     <div class="container">
         <div class="row">
@@ -35,7 +33,7 @@
                                     <div class="thumb">
                                         <img class="img-whp" src="images/courses/t1.jpg" alt="t1.jpg">
                                         <div class="overlay">
-                                            <a class="tc_preview_course" href="#">İncele</a>
+                                            <a class="tc_preview_course" href="{{ route('sinav.detay', $row->slug) }}">İncele</a>
                                         </div>
                                     </div>
                                     <div class="details">

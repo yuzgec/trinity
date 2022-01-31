@@ -106,29 +106,28 @@
                                 @endforeach
                             </ul>
                         </div>
-                    </div><!-- FILTER BUTTONS -->
+                    </div>
                     <div class="emply-text-sec">
                         <div class="row" id="masonry_abc">
                             @foreach($Service as $row)
-                            <div class="col-md-6 col-lg-4 col-xl-3 {{ $row->getCategory->slug }}">
-                                <div class="top_courses">
-                                    <div class="thumb">
-                                        <img class="img-whp" src="images/courses/t1.jpg" alt="t1.jpg">
-                                        <div class="overlay">
-                                            <a class="tc_preview_course" href="#">İncele</a>
-                                        </div>
-                                    </div>
-                                    <div class="details">
-                                        <div class="tc_content">
-                                            <p>{{ $row->getCategory->title }}</p>
-                                            <h5>{{ $row->title }}</h5>
-                                        </div>
-                                        <div class="tc_footer">
+                                <div class="col-md-6 col-lg-4 col-xl-3 {{ $row->getCategory->slug }}">
 
+                                    <div class="top_courses">
+                                        <div class="thumb">
+                                            <img class="img-whp" src="images/courses/t1.jpg" alt="t1.jpg">
+                                            <div class="overlay">
+                                                <a class="tc_preview_course" href="{{ route('sinav.detay', $row->slug) }}">İncele</a>
+                                            </div>
+                                        </div>
+                                        <div class="details">
+                                            <div class="tc_content">
+                                                <p>{{ $row->getCategory->title }}</p>
+                                                <h5>{{ $row->title }}</h5>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+
                             @endforeach
                         </div>
                     </div>

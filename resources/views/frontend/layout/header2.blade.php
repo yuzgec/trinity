@@ -21,11 +21,12 @@
                     <a href="#"><span class="title">Sınavlar</span></a>
                     <ul>
                         @foreach($Service_Categories as $item)
+
                             <li>
-                                <a href="#">{{ $item->title  }}</a>
+                                <a href="{{ route('sinav.kategori', $item->slug) }}">{{ $item->title  }}</a>
                                 <ul>
                                     @foreach($Service->where('category', $item->id) as $row)
-                                        <li><a href="page-course-v1.html">{{ $row->title }}</a></li>
+                                        <li><a href="{{ route('sinav.detay',[$row->slug] ) }}">{{ $row->title }}</a></li>
                                     @endforeach
                                 </ul>
                             </li>
