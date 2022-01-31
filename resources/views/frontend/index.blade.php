@@ -11,6 +11,8 @@
                 <div class="col-sm-6 col-lg-6"></div>
                 @foreach($Service_Categories as $item)
                     <div class="col-sm-6 col-lg-3" style="">
+                        <a href="{{ route('sinav.kategori', $item->slug) }}">
+
                         <div class="img_hvr_box home7 three" style="background-image: url(https://www.laternamuzikkursu.com/upload/slider/67keman-dersi-karsiyaka.jpg);border:3px solid white">
                             <div class="overlay">
                                 <div class="details">
@@ -19,7 +21,9 @@
                                 </div>
                             </div>
                         </div>
+                        </a>
                     </div>
+
                 @endforeach
             </div>
 
@@ -83,18 +87,8 @@
         </div>
     </section>
 
-
-    <!-- Top Courses -->
     <section id="top-courses" class="top-courses pb30">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="main-title text-center">
-                        <h3 class="mt0">Browse Our Top Courses</h3>
-                        <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div id="options" class="alpha-pag full">

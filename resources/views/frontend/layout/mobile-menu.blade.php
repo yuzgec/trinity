@@ -71,8 +71,8 @@
             </li>
             <li><span>Galeri</span>
                 <ul>
-                    <li><a href="{{ route('video') }}">Video Galeri</a></li>
-                    <li><a href="{{ route('galeri') }}">Foto Galeri</a></li>
+                    <li><a href="{{ route('videolar') }}">Video Galeri</a></li>
+                    <li><a href="{{ route('galeriler') }}">Foto Galeri</a></li>
                 </ul>
             </li>
             <li><a href="{{ route('iletisim') }}">İletişim</a></li>

@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GalleryCategory;
 use App\Models\Page;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use App\Models\Service;
 use App\Models\ServiceCategory;
+use App\Models\VideoCategory;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -50,18 +52,20 @@ class HomeController extends Controller
 
     }
 
-    public function videoKategori(){
-
-
+    public function video(){
+        $All = VideoCategory::all();
+        //dd($All);
+        return view('frontend.video.index', compact('All'));
     }
 
     public function galeriDetay(){
 
 
     }
-    public function galeriKategori(){
 
-
+    public function galeri(){
+        $All = GalleryCategory::all();
+        return view('frontend.galeri.index', compact('All'));
     }
 
     public function blogDetay(){
@@ -77,8 +81,6 @@ class HomeController extends Controller
 
 
     }
-
-
 
     public function iletisim(){
         return view('frontend.iletisim');

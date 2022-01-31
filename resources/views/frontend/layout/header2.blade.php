@@ -52,10 +52,10 @@
                     <a href="#"><span class="title">Galeri</span></a>
                     <ul>
                         <li>
-                            <a href="{{ route('video') }}"><span class="title">Video Galeri</span></a>
+                            <a href="{{ route('videolar') }}"><span class="title">Video Galeri</span></a>
                         </li>
                         <li>
-                            <a href="{{ route('galeri') }}"><span class="title">Foto Galeri</span></a>
+                            <a href="{{ route('galeriler') }}"><span class="title">Foto Galeri</span></a>
                         </li>
                     </ul>
                 </li>

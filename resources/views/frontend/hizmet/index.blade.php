@@ -3,22 +3,23 @@
     @section('header')
         @include('frontend.layout.header2')
     @endsection
-    <section class="inner_page_breadcrumb style2 blog_grid_bg_color" style="background-image: url('https://www.laternamuzikkursu.com/upload/slider/67keman-dersi-karsiyaka.jpg')">
+    <section class="inner_page_breadcrumb style2 blog_grid_bg_color" style="background-image: url('/frontend/images/headerback.png')">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 offset-xl-3 text-center">
                     <div class="breadcrumb_content">
-                        <h4 class="breadcrumb_title">{{ $Detay->title }}</h4>
+                        <h1 class="text-white">{{ $Detay->title }}</h1>
                         <ol class="d-flex align-items-center justify-content-center">
-                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Anasayfa</a></li>
-                            <li class="breadcrumb-item"><a href="{{ route('sinav.kategori', $Detay->getCategory->slug) }}">{{$Detay->getCategory->title}}</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{ $Detay->title }}</li>
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-white">Anasayfa</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('sinav.kategori', $Detay->getCategory->slug) }}" class="text-white">{{$Detay->getCategory->title}}</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">{{ $Detay->title }}</li>
                         </ol>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <section id="top-courses " class="blog-post">
         <div class="container">
             <div class="row">
@@ -379,8 +380,7 @@
                 <div class="col-lg-4 col-xl-3 pl-lg-0 pr-lg-0">
                     <div class="sidebar_course_widget style2">
                         <div class="course_list_details">
-                            <div class="price_title df">Price <span class="custome_price pr10 pl10 vas">$49.00</span> $69.00</div>
-                            <a class="btn btn-block buy_now_btn dbxshad btn-lg btn-thm3 mt20" href="#">Buy & Enrol Now</a>
+                            <a class="btn btn-block buy_now_btn dbxshad btn-lg btn-thm3 mt20" href="#">İletişime Geç</a>
                             <ul class="icon-box-list mt20 mb0">
                                 <li><span class="fwb fz15 icon flaticon-clock"></span> <span class="fwb fz15 pl10 title">Duration</span> <span class="para"> 15 weeks</span></li>
                                 <li><span class="fwb fz15 icon flaticon-creative-idea"></span> <span class="fwb fz15 pl10 title">SKILL LEVEL</span> <span class="para"> Professional</span></li>

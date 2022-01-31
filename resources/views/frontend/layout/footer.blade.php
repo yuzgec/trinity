@@ -26,8 +26,8 @@
                         <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Hakkımızda</a></li>
                         <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Sertfikasyon</a></li>
                         <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Eğitmenler</a></li>
-                        <li><a href="{{ route('video') }}"><i class="flaticon-right-arrow-1 right"></i> Video Galeri</a></li>
-                        <li><a href="{{ route('galeri') }}"><i class="flaticon-right-arrow-1 right"></i> Foto Galeri</a></li>
+                        <li><a href="{{ route('videolar') }}"><i class="flaticon-right-arrow-1 right"></i> Video Galeri</a></li>
+                        <li><a href="{{ route('galeriler') }}"><i class="flaticon-right-arrow-1 right"></i> Foto Galeri</a></li>
                         <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Temsilci Ol</a></li>
                         <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> İ.K.</a></li>
                         <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> S.S.S</a></li>

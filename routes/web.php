@@ -19,9 +19,9 @@ use Spatie\Sitemap\SitemapGenerator;
     Route::get('/kitap/{url?}', 'HomeController@kitapDetay')->name('kitap.detay');
     Route::get('/kitap-kategori/{url?}', 'HomeController@kitapKategori')->name('kitap.kategori');
     Route::get('/video/{url?}', 'HomeController@videoDetay')->name('video.detay');
-    Route::get('/video/', 'HomeController@videoKategori')->name('video');
+    Route::get('/videogaleri', 'HomeController@video')->name('videolar');
     Route::get('/galeri/{url?}', 'HomeController@galeriDetay')->name('galeri.detay');
-    Route::get('/galeri/', 'HomeController@galeriKategori')->name('galeri');
+    Route::get('/fotogaleri', 'HomeController@galeri')->name('galeriler');
     Route::get('/iletisim', 'HomeController@iletisim')->name('iletisim');
 
     Route::group(["prefix"=>"go", 'middleware' => ['auth']],function() {
