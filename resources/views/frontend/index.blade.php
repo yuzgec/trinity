@@ -108,7 +108,7 @@
 
                                     <div class="top_courses">
                                         <div class="thumb">
-                                            <img class="img-whp" src="images/courses/t1.jpg" alt="t1.jpg">
+                                            <img class="img-whp" src="{{ (!$row->getFirstMediaUrl('page')) ? '/frontend/resimyok.jpg': $row->getFirstMediaUrl('page', 'thumb')}}" alt="{{ $row->title }}">
                                             <div class="overlay">
                                                 <a class="tc_preview_course" href="{{ route('sinav.detay', $row->slug) }}">İncele</a>
                                             </div>
