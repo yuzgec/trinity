@@ -33,5 +33,9 @@ class Page extends Model implements HasMedia
         $this->addMediaConversion('thumb')
             ->width(400)
             ->nonOptimized();
+
+        $this->addMediaConversion('small')
+            ->width(150)
+            ->nonOptimized();
     }
 }
