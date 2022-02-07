@@ -27,4 +27,11 @@ class Page extends Model implements HasMedia
     public function getCategory(){
         return $this->belongsTo('App\Models\PageCategory', 'category');
     }
+
+    public function registerMediaConversions(Media $media = null): void
+    {
+        $this->addMediaConversion('thumb')
+            ->width(400)
+            ->nonOptimized();
+    }
 }

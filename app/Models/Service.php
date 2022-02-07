@@ -8,19 +8,19 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\Activitylog\LogOptions;
 use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
 class Service extends Model implements HasMedia
 {
-    use HasFactory, SoftDeletes,InteractsWithMedia,LogsActivity;
+    use HasFactory,SoftDeletes,InteractsWithMedia,LogsActivity;
 
     protected $guarded = [];
     protected $table = 'service';
 
     public function getActivitylogOptions(): LogOptions
     {
-        return LogOptions::defaults()
-            ->logOnly(['title', 'slug']);
+        return LogOptions::defaults()->logOnly(['title', 'slug']);
     }
 
     public function getCategory(){
