@@ -27,4 +27,11 @@ class Service extends Model implements HasMedia
         return $this->belongsTo('App\Models\ServiceCategory', 'category');
     }
 
+    public function registerMediaConversions(Media $media = null): void
+    {
+        $this->addMediaConversion('thumb')
+            ->width(400)
+            ->nonOptimized();
+    }
+
 }
