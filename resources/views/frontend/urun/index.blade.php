@@ -3,23 +3,25 @@
     @section('header')
         @include('frontend.layout.header2')
     @endsection
-<!-- Inner Page Breadcrumb -->
-<section class="inner_page_breadcrumb">
+
+<section class="inner_page_breadcrumb style2 blog_grid_bg_color" style="background-image: url('/frontend/images/headerback.png')">
     <div class="container">
         <div class="row">
             <div class="col-xl-6 offset-xl-3 text-center">
                 <div class="breadcrumb_content">
-                    <h4 class="breadcrumb_title">Kitap - </h4>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Anasayfa</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Kitaplar</li>
-                        <li class="breadcrumb-item active" aria-current="page">Kitaplar</li>
+                    <h1 class="text-white">{{ $Detay->getCategory->title }} - {{ $Detay->title }}</h1>
+                    <ol class="d-flex align-items-center justify-content-center">
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-white">Anasayfa</a></li>
+                        <li class="breadcrumb-item  text-white active">Kitaplar</li>
+                        <li class="breadcrumb-item  text-white active">{{ $Detay->getCategory->title }}</li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">{{ $Detay->title }}</li>
                     </ol>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <section class="our-team pb50">
     <div class="container">
         <div class="row">
@@ -27,7 +29,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-lg-6 col-xl-6">
                         <div class="instructor_search_result">
-                            <p class="mt10 fz15"><span class="color-dark pr10">{{ $Kategori->count() }}</span> adet kitap listelenmiştir.</p>
+                            <p class="mt10 fz15"><span class="color-dark pr10">[{{ $Books->count() }}]</span> adet kitap listelenmiştir.</p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-6 col-xl-6">
@@ -64,7 +66,7 @@
                                     <div class="category_sidebar_widget">
                                         <ul class="category_list">
                                             @foreach($Service->where('category', $item->id) as $row)
-                                            <li><a href="#">{{ $row->title }} </a></li>
+                                            <li><a href="{{route('kitap.kategori', $row->slug)}}">{{ $row->title }} </a></li>
                                             @endforeach
                                         </ul>
                                     </div>

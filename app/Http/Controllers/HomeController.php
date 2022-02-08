@@ -37,9 +37,10 @@ class HomeController extends Controller
     }
 
     public function kitapKategori($url){
-        $Kategori =  Product::with('getCategory')->where('slug', $url)->get();
-        $Detay = ProductCategory::where('slug', $url)->first();
-        return view('frontend.urun.index', compact('Kategori', 'Detay'));
+
+        $Detay  = Product::with('getCategory')->where('slug', $url)->first();
+        $Books  = Product::where('slug', $url)->get();
+        return view('frontend.urun.index', compact('Books', 'Detay'));
     }
 
     public function kitapDetay(){

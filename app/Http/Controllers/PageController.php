@@ -39,12 +39,12 @@ class PageController extends Controller
         $New->seo_title = $request->seo_title;
 
         if($request->hasfile('image')){
-            $New->addMedia($request->image)->withResponsiveImages()->toMediaCollection('page');
+            $New->addMedia($request->image)->toMediaCollection('page');
         }
 
         if($request->hasfile('gallery')) {
             foreach ($request->gallery as $item){
-                $New->addMedia($item)->withResponsiveImages()->toMediaCollection('gallery');
+                $New->addMedia($item)->toMediaCollection('gallery');
             }
         }
 
@@ -92,12 +92,12 @@ class PageController extends Controller
 
         if ($request->hasFile('image')) {
             $Update->media()->where('collection_name', 'page')->delete();
-            $Update->addMedia($request->image)->withResponsiveImages()->toMediaCollection('page');
+            $Update->addMedia($request->image)->toMediaCollection('page');
         }
 
         if($request->hasfile('gallery')) {
             foreach ($request->gallery as $item){
-                $Update->addMedia($item)->withResponsiveImages()->toMediaCollection('gallery');
+                $Update->addMedia($item)->toMediaCollection('gallery');
             }
         }
 
