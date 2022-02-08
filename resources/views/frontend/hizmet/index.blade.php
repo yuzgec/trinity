@@ -26,81 +26,114 @@
                 <div class="col-lg-8 col-xl-9">
                     <img src="{{ (!$Detay->getFirstMediaUrl('page')) ? '/frontend/resimyok.jpg': $Detay->getFirstMediaUrl('page')}}" alt="{{ $Detay->title }}" class="img-fluid" width="100%">
                     <div class="courses_single_container">
-                        <div class="cs_rwo_tabs csv2">
-                            <ul class="nav nav-tabs style4 mt30" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link style4 active" id="genel-bakis-tab" data-toggle="tab" href="#Overview" role="tab" aria-controls="Genel Bakış" aria-selected="true">
-                                        Genel Bakış
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link style4" id="icerik-tab" data-toggle="tab" href="#icerik" role="tab" aria-controls="Sınav İçeriği" aria-selected="false">
-                                       Sınav İçeriği
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link style4" id="seviyeler-tab" data-toggle="tab" href="#course" role="tab" aria-controls="Sınav Seviyeleri" aria-selected="false">
-                                        Sınav Seviyeleri
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link style4" id="instructor-tab" data-toggle="tab" href="#instructor" role="tab" aria-controls="Sınav Tarihleri" aria-selected="false">
-                                        Sınav Tarihleri
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link style4" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">
-                                        Eğitmen
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="tab-content" id="myTabContent">
-                                <div class="tab-pane fade show active" id="Overview" role="tabpanel" aria-labelledby="Overview-tab">
-                                    <div class="cs_row_two csv2">
-                                        <div class="cs_overview style2">
-                                            {!! $Detay->desc !!}
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="tab-pane fade" id="icerik" role="tabpanel" aria-labelledby="icerik-tab">
-                                    <div class="cs_row_three csv2">
-                                        <div class="course_content style2">
-
-                                            @for($i=1; $i <= 8; $i++)
-                                                <div class="details">
-                                                    <div id="accordion" class="panel-group cc_tab">
-                                                        <div class="panel">
-
-                                                            <div class="panel-heading">
-                                                                <h4 class="panel-title">
-                                                                    <a href="#panelBodyCourseStart{{$i}}" class="accordion-toggle link" data-toggle="collapse" data-parent="#accordion">
-                                                                        Grade {{$i}}
-                                                                    </a>
-                                                                </h4>
-                                                            </div>
-                                                            <div id="panelBodyCourseStart{{$i}}" class="panel-collapse collapse {{ ($i == 1) ? 'show' : null}}">
-                                                                <div class="panel-body">
-                                                                    Grade {{$i}} İçeriği
-                                                                    <p>At Grade 1 you can develop a range of skills and techniques including counting, pick-ups, belt and intervals. In the exam you’ll play a set list of three songs and demonstrate your playback or improvising skills.</p>
-
-                                                                    <p>   You can find out more about the exam by downloading the complete Vocals syllabus, or taking a look at the information below.</p>
-                                                                    <p>At Grade 1 you can develop a range of skills and techniques including counting, pick-ups, belt and intervals. In the exam you’ll play a set list of three songs and demonstrate your playback or improvising skills.</p>
-
-                                                                    <p>    You can find out more about the exam by downloading the complete Vocals syllabus, or taking a look at the information below.</p>
-                                                               </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            @endfor
-                                        </div>
-
-                                    </div>
-                                </div>
-
+                        <div class="cs_row_two mt-2">
+                            <div class="cs_overview">
+                                <h4 class="title">Genel Bakış</h4>
+                                {!! $Detay->desc !!}
                             </div>
                         </div>
+                        <div class="cs_row_three">
+                            <div class="course_content">
+                                <div class="cc_headers">
+                                    <h4 class="title">Course Content</h4>
+                                    <ul class="course_schdule float-right">
+                                        <li class="list-inline-item"><a href="#">92 Lectures</a></li>
+                                        <li class="list-inline-item"><a href="#">10:56:11</a></li>
+                                    </ul>
+                                </div>
+                                <br>
+                                <div class="details">
+                                    <div id="accordion" class="panel-group cc_tab">
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a href="#panelBodyCourseStart" class="accordion-toggle link" data-toggle="collapse" data-parent="#accordion">Getting Started</a>
+                                                </h4>
+                                            </div>
+                                            <div id="panelBodyCourseStart" class="panel-collapse collapse show">
+                                                <div class="panel-body">
+                                                    <ul class="cs_list mb0">
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.1 Introduction to the User Experience Course <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.2 Exercise: Your first design challenge <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.3 How to solve the previous exercise <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.4 Find out why smart objects are amazing <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.5 How to use text layers effectively <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <div id="accordion" class="panel-group cc_tab">
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a href="#panelBodyCourseBrief" class="accordion-toggle link" data-toggle="collapse" data-parent="#accordion">The Brief</a>
+                                                </h4>
+                                            </div>
+                                            <div id="panelBodyCourseBrief" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="cs_list mb0">
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.1 Introduction to the User Experience Course <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.2 Exercise: Your first design challenge <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.3 How to solve the previous exercise <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.4 Find out why smart objects are amazing <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.5 How to use text layers effectively <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <div id="accordion" class="panel-group cc_tab">
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a href="#panelBodyCourseLow" class="accordion-toggle link" data-toggle="collapse" data-parent="#accordion">Wireframing Low Fidelity</a>
+                                                </h4>
+                                            </div>
+                                            <div id="panelBodyCourseLow" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="cs_list mb0">
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.1 Introduction to the User Experience Course <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.2 Exercise: Your first design challenge <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.3 How to solve the previous exercise <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.4 Find out why smart objects are amazing <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.5 How to use text layers effectively <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <div id="accordion" class="panel-group cc_tab">
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a href="#panelBodyCourseType" class="accordion-toggle link" data-toggle="collapse" data-parent="#accordion">Type, Color & Icon Introduction</a>
+                                                </h4>
+                                            </div>
+                                            <div id="panelBodyCourseType" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="cs_list mb0">
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.1 Introduction to the User Experience Course <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.2 Exercise: Your first design challenge <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.3 How to solve the previous exercise <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.4 Find out why smart objects are amazing <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                        <li><a href="#"><span class="flaticon-play-button-1 icon"></span> Lecture1.5 How to use text layers effectively <span class="cs_time">02:53</span> <span class="cs_preiew">Preview</span></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
