@@ -3,7 +3,7 @@
 @section('content')
     <div class="col-12 col-md-9">
         <div class="card">
-            {{Form::open(['route' => 'page-categories.store', 'enctype' => 'multipart/form-data'])}}
+            {{Form::open(['route' => 'product-categories.store', 'enctype' => 'multipart/form-data'])}}
             <div class="card-header d-flex justify-content-between">
                 <x-add title="Sayfa Kategori"></x-add>
                 <div>
@@ -12,7 +12,7 @@
                 </div>
             </div>
              <div class="card-body">
-                  <x-form-inputtext label="Başlık Adı Giriniz" name="title"/>
+                  <x-form-inputtext label="Başlık Giriniz" name="title"/>
                   <x-form-select label="Üst Kategori" name="parent_id" :list="$Kategori" placeholder="Üst Kategori Yok"/>
                   <x-form-textarea label="Kısa Açıklama" name="short" :ck=null/>
                   <x-form-textarea label="Açıklama" name="desc" />
@@ -50,7 +50,7 @@
     <script type="text/javascript">
 
         CKEDITOR.replace( 'aciklama', {
-            filebrowserUploadUrl: "{{ route('page-categories.postUpload', ['_token' => csrf_token()]) }}",
+            filebrowserUploadUrl: "{{ route('product-categories.postUpload', ['_token' => csrf_token()]) }}",
             filebrowserUploadMethod: 'form',
             height : 400,
             toolbar: [

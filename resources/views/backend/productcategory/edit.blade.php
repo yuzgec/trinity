@@ -1,7 +1,7 @@
 @extends('backend.layout.app')
 @section('title', $Edit->title.' | Sayfa Kategori Düzenle')
 @section('content')
-    {{Form::model($Edit, ["route" => ["page-categories.update", $Edit->id],'enctype' => 'multipart/form-data'])}}
+    {{Form::model($Edit, ["route" => ["product-categories.update", $Edit->id],'enctype' => 'multipart/form-data'])}}
     @method('PUT')
     <div class="row">
         <div class="col-12 col-md-9">
@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <x-form-inputtext label="Başlık Adı Giriniz" name="title"></x-form-inputtext>
+                    <x-form-inputtext label="Başlık Giriniz" name="title"></x-form-inputtext>
                     <x-form-select label="Kategori" name="parent_id" :list="$Kategori" :selected="$Edit->parent_id" placeholder="Üst Kategori Yok"></x-form-select>
                     <x-form-textarea label="Kısa Açıklama" name="short" :ck='null'></x-form-textarea>
                     <x-form-textarea label="Açıklama" name="desc"></x-form-textarea>
@@ -68,7 +68,7 @@
     <script type="text/javascript">
 
         CKEDITOR.replace( 'aciklama', {
-            filebrowserUploadUrl: "{{ route('page-categories.postUpload', ['_token' => csrf_token()]) }}",
+            filebrowserUploadUrl: "{{ route('product-categories.postUpload', ['_token' => csrf_token()]) }}",
             filebrowserUploadMethod: 'form',
             height : 400,
             toolbar: [
