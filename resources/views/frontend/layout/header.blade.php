@@ -81,7 +81,7 @@
                                 <a href="{{ route('kitap.kategori', $item->slug) }}">{{ $item->title  }}</a>
                                 <ul>
                                     @foreach($Service->where('category', $item->id) as $row)
-                                        <li><a href="{{route('kitap.kategori', $row->slug)}}">{{ $row->title }}</a></li>
+                                        <li><a href="{{route('kitap.kategori', [$item->slug,$row->slug])}}">{{ $row->title }}</a></li>
                                     @endforeach
                                 </ul>
                             </li>
@@ -96,7 +96,7 @@
                             <a href="{{ route('sinav.kategori', $item->slug) }}">{{ $item->title  }}</a>
                             <ul>
                                 @foreach($Service->where('category', $item->id) as $row)
-                                    <li><a href="{{ route('sinav.detay',[$row->slug] ) }}">{{ $row->title }}</a></li>
+                                    <li><a href="{{route('sinav.kategori', [$item->slug,$row->slug])}}">{{ $row->title }}</a></li>
                                 @endforeach
                             </ul>
                         </li>

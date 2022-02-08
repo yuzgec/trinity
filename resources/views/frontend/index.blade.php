@@ -134,4 +134,4 @@
     @include('frontend.layout.temsilcilik-ara')
 
 
-    @endsection
+@endsection

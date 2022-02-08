@@ -176,7 +176,7 @@
                             <h4 class="title">{{ $Detay->getCategory->title }}</h4>
                             @foreach($Service->where('category', $Detay->getCategory->id) as $item)
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="{{route('sinav.kategori', $item->slug) }}" >{{ $item->title }}</a>
+                                    <a href="{{route('sinav.kategori', [$Detay->getCategory->title,$item->slug]) }}" >{{ $item->title }}</a>
                                 </li>
                             @endforeach
                         </ul>
