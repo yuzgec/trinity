@@ -22,18 +22,15 @@ class HomeController extends Controller
 
 
     public function sinavKategori($url){
-
         $Kategori =  Service::whereRelation('getCategory', 'slug', '=', $url)->get();
         $Detay = ServiceCategory::where('slug', $url)->first();
         return view('frontend.hizmet.detail', compact('Kategori', 'Detay'));
-
     }
 
     public function sinavDetay($kategori,$url){
         $Kategori = ServiceCategory::where('slug', $kategori)->first();
         $Detay = Service::with('getCategory')->where('slug', $url)->first();
         return view('frontend.hizmet.index', compact('Detay'));
-
     }
 
     public function kitapKategori($url){
@@ -45,7 +42,7 @@ class HomeController extends Controller
     public function kitapDetay($kategori,$url){
         $Kategori = ProductCategory::where('slug', $kategori)->first();
         $Detay = Product::with('getCategory')->where('slug', $url)->first();
-        //dd($url);
+        dd($Detay);
         return view('frontend.urun.detail', compact('Detay', 'Kategori'));
     }
 

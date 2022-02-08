@@ -36,11 +36,11 @@
                 <li>
                     <a href="#"><span class="title">Kitaplar</span></a>
                     <ul>
-                        @foreach($Product_Categories as $item)
+                        @foreach($Product_Categories->whereNull('parent_id') as $item)
                             <li>
                                 <a href="#">{{ $item->title  }}</a>
                                 <ul>
-                                    @foreach($Product->where('category', $item->id) as $row)
+                                    @foreach($Product_Categories->where('parent_id', $item->id) as $row)
                                         <li><a href="{{route('kitap.detay', [$item->slug,$row->slug]) }}">{{ $row->title }}</a></li>
                                     @endforeach
                                 </ul>
