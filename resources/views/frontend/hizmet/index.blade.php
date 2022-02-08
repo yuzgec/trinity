@@ -138,6 +138,16 @@
                                 <h4>Müfredat İndir</h4>
                             </div>
                         </div>
+                    <div class="blog_category_widget mt-3">
+                        <ul class="list-group">
+                            <h4 class="title">{{ $Detay->getCategory->title }}</h4>
+                            @foreach($Service->where('category', $Detay->getCategory->id) as $item)
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="{{route('sinav.kategori', $item->slug) }}" >{{ $item->title }}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
                     </div>
 
             </div>
