@@ -36,12 +36,12 @@
                 <li>
                     <a href="#"><span class="title">Kitaplar</span></a>
                     <ul>
-                        @foreach($Service_Categories as $item)
+                        @foreach($Product_Categories as $item)
                             <li>
                                 <a href="#">{{ $item->title  }}</a>
                                 <ul>
-                                    @foreach($Service->where('category', $item->id) as $row)
-                                        <li><a href="{{route('kitap.detay', [$item->slug,$row->slug])}}">{{ $row->title }}</a></li>
+                                    @foreach($Product->where('category', $item->id) as $row)
+                                        <li><a href="{{route('kitap.detay', [$item->slug,$row->slug]) }}">{{ $row->title }}</a></li>
                                     @endforeach
                                 </ul>
                             </li>

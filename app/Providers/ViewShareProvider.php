@@ -5,6 +5,8 @@ namespace App\Providers;
 use App\Models\Blog;
 use App\Models\Page;
 use App\Models\PageCategory;
+use App\Models\Product;
+use App\Models\ProductCategory;
 use App\Models\Service;
 use App\Models\ServiceCategory;
 use App\Models\Setting;
@@ -38,6 +40,8 @@ class ViewShareProvider extends ServiceProvider
             $Page_Categories = PageCategory::all();
             $Service_Categories =  ServiceCategory::all();
             $Service = Service::with('getCategory')->get();
+            $Product_Categories =  ProductCategory::all();
+            $Product = Product::with('getCategory')->get();
             $Blog =  Blog::all();
             //dd($Service);
             View::share([
@@ -45,7 +49,9 @@ class ViewShareProvider extends ServiceProvider
                 'Page_Categories' => $Page_Categories,
                 'Service_Categories' => $Service_Categories,
                 'Service' => $Service,
-                'Blog' => $Blog
+                'Blog' => $Blog,
+                'Product_Categories' => $Product_Categories,
+                'Product' => $Product,
             ]);
         }
 
