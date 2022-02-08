@@ -26,7 +26,7 @@
                 <div class="col-lg-8 col-xl-9">
                     <div class="blog_post_home6 style2 video">
                         <div class="bg_img_video_widget h500 thumb">
-                            <div class="bg-video" style="background-image: url(images/home/4.jpg);">
+                            <div class="bg-video" style="background-image: url({{ (!$Detay->getFirstMediaUrl('page')) ? '/frontend/resimyok.jpg': $Detay->getFirstMediaUrl('page')}});">
                                 <div class="bt-play text-center"><span class="flaticon-play-button"></span>Preview Video</div>
                             </div>
                             <div class="video-container">
@@ -38,23 +38,35 @@
                         <div class="cs_rwo_tabs csv2">
                             <ul class="nav nav-tabs style4 mt30" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link style4 active" id="Overview-tab" data-toggle="tab" href="#Overview" role="tab" aria-controls="Overview" aria-selected="true">Overview</a>
+                                    <a class="nav-link style4 active" id="genel-bakis-tab" data-toggle="tab" href="#Overview" role="tab" aria-controls="Genel Bakış" aria-selected="true">
+                                        Genel Bakış
+                                    </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link style4" id="course-tab" data-toggle="tab" href="#course" role="tab" aria-controls="course" aria-selected="false">Course Content</a>
+                                    <a class="nav-link style4" id="icerik-tab" data-toggle="tab" href="#course" role="tab" aria-controls="Sınav İçeriği" aria-selected="false">
+                                       Sınav İçeriği
+                                    </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link style4" id="instructor-tab" data-toggle="tab" href="#instructor" role="tab" aria-controls="instructor" aria-selected="false">instructor</a>
+                                    <a class="nav-link style4" id="seviyeler-tab" data-toggle="tab" href="#course" role="tab" aria-controls="Sınav Seviyeleri" aria-selected="false">
+                                        Sınav Seviyeleri
+                                    </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link style4" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Review</a>
+                                    <a class="nav-link style4" id="tarihler-tab" data-toggle="tab" href="#instructor" role="tab" aria-controls="Sınav Tarihleri" aria-selected="false">
+                                        Sınav Tarihleri
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link style4" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">
+                                        Eğitmen
+                                    </a>
                                 </li>
                             </ul>
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="Overview" role="tabpanel" aria-labelledby="Overview-tab">
                                     <div class="cs_row_two csv2">
                                         <div class="cs_overview style2">
-                                            <h4 class="title">Overview</h4>
                                             <h4 class="subtitle">Course Description</h4>
                                             <p class="mb30">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
                                             <p class="mb20">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
