@@ -29,9 +29,9 @@ class HomeController extends Controller
 
     }
 
-    public function sinavDetay($url){
+    public function sinavDetay($kategori,$url){
+        $Kategori = ServiceCategory::where('slug', $kategori)->first();
         $Detay = Service::with('getCategory')->where('slug', $url)->first();
-        //dd($Detay);
         return view('frontend.hizmet.index', compact('Detay'));
 
     }

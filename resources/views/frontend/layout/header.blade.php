@@ -96,7 +96,7 @@
                             <a href="{{ route('sinav.kategori', $item->slug) }}">{{ $item->title  }}</a>
                             <ul>
                                 @foreach($Service->where('category', $item->id) as $row)
-                                    <li><a href="{{route('sinav.kategori', [$item->slug,$row->slug])}}">{{ $row->title }}</a></li>
+                                    <li><a href="{{route('sinav.detay', [$item->slug,$row->slug])}}">{{ $row->title }}</a></li>
                                 @endforeach
                             </ul>
                         </li>
