@@ -62,11 +62,7 @@ class ProductController extends Controller
 
     public function edit($id)
     {
-
-
         $Edit = Product::findOrFail($id);
-
-        //dd($Edit->getMedia('product'));
         $Kategori = ProductCategory::pluck('title', 'id');
         return view('backend.product.edit', compact('Edit', 'Kategori'));
     }

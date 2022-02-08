@@ -45,7 +45,7 @@ class HomeController extends Controller
     public function kitapDetay($kategori,$url){
         $Kategori = ProductCategory::where('slug', $kategori)->first();
         $Detay = Product::with('getCategory')->where('slug', $url)->first();
-        dd($url);
+        //dd($url);
         return view('frontend.urun.detail', compact('Detay', 'Kategori'));
     }
 

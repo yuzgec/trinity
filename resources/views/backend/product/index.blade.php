@@ -141,7 +141,7 @@
                     <tfoot>
                     <tr>
                         <th colspan="4">
-                            <a class="btn btn-success btn-block btn-sm" href="{{ route('page-categories.create') }}" title="Yeni Kategori Ekle">
+                            <a class="btn btn-success btn-block btn-sm" href="{{ route('product-categories.create') }}" title="Yeni Kategori Ekle">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                                 Yeni Ekle
                             </a>
@@ -153,7 +153,7 @@
                     @foreach($Kategori  as $item)
                         <tr>
                             <td>
-                                <span class="avatar me-2" style="background-image: url({{ (!$item->getFirstMediaUrl('page')) ? '/backend/resimyok.jpg': $item->getFirstMediaUrl('page-categories')}})"></span>
+                                <span class="avatar me-2" style="background-image: url({{ (!$item->getFirstMediaUrl('page')) ? '/backend/resimyok.jpg': $item->getFirstMediaUrl('page', 'small')}})"></span>
                             </td>
                             <td>
                                 <div class="font-weight-medium">{{ $item->title }}</div>
