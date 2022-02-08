@@ -24,13 +24,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-xl-9">
-                    <div class="blog_post_home6 style2 video">
-                        <div class="bg_img_video_widget h500 thumb">
-                            <div class="bg-video" style="background-image: url({{ (!$Detay->getFirstMediaUrl('page')) ? '/frontend/resimyok.jpg': $Detay->getFirstMediaUrl('page')}});">
-                            </div>
-
-                        </div>
-                    </div>
+                    <img src="{{ (!$Detay->getFirstMediaUrl('page')) ? '/frontend/resimyok.jpg': $Detay->getFirstMediaUrl('page')}}" alt="{{ $Detay->title }}" class="img-fluid" width="100%">
                     <div class="courses_single_container">
                         <div class="cs_rwo_tabs csv2">
                             <ul class="nav nav-tabs style4 mt30" id="myTab" role="tablist">
@@ -134,7 +128,17 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                        <div class="blog_post mt-3">
+                            <div class="thumb">
+                                <img class="img-fluid" src="/frontend/images/hizmetpdf.jpg" alt="Müfredat İndir" width="100%">
+                            </div>
+                            <div class="details text-white">
+                                <i class="fa fa-file-pdf-o" style="font-size:30px"></i>
+                                <h5>{{ $Detay->getCategory->title }}</h5>
+                                <h4>Müfredat İndir</h4>
+                            </div>
+                        </div>
+                    </div>
 
             </div>
         </div>

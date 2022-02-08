@@ -6252,7 +6252,6 @@ header.header-nav.menu_style_home_five.home11.style2.navbar-scrolltofixed.strick
   left: 0;
 }
 .blog_post .thumb:before{
-  background-color: rgba(0,0,0, .6);
   bottom: 0;
   content: "";
   position: absolute;
