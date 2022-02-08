@@ -186,5 +186,6 @@
             </div>
         </div>
     </section>
+@include('frontend.layout.temsilcilik-ara')
 
 @endsection

@@ -41,7 +41,7 @@
                                 <a href="#">{{ $item->title  }}</a>
                                 <ul>
                                     @foreach($Service->where('category', $item->id) as $row)
-                                        <li><a href="page-course-v1.html">{{ $row->title }}</a></li>
+                                        <li><a href="{{route('kitap.kategori', $row->slug)}}">{{ $row->title }}</a></li>
                                     @endforeach
                                 </ul>
                             </li>

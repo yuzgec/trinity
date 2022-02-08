@@ -16,8 +16,10 @@ use Spatie\Sitemap\SitemapGenerator;
     Route::get('/blog/{kategori?}/{url?}', 'HomeController@blogDetay')->name('blog.detay');
     Route::get('/blog/{kategori?}', 'HomeController@blogKategori')->name('blog.kategori');
     Route::get('/kurumsal/{url?}', 'HomeController@kurumsalDetay')->name('kurumsal.detay');
+
     Route::get('/kitap/{url?}', 'HomeController@kitapDetay')->name('kitap.detay');
     Route::get('/kitap-kategori/{url?}', 'HomeController@kitapKategori')->name('kitap.kategori');
+
     Route::get('/video/{url?}', 'HomeController@videoDetay')->name('video.detay');
     Route::get('/videogaleri', 'HomeController@video')->name('videolar');
     Route::get('/galeri/{url?}', 'HomeController@galeriDetay')->name('galeri.detay');
