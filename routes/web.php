@@ -11,11 +11,13 @@ use Spatie\Sitemap\SitemapGenerator;
     });
 
     Route::get('/', 'HomeController@index')->name('home');
+
     Route::get('/sinav-kategori/{url}', 'HomeController@sinavKategori')->name('sinav.kategori');
     Route::get('/sinav/{kategori}/{url}', 'HomeController@sinavDetay')->name('sinav.detay');
 
     Route::get('/blog/{kategori?}/{url?}', 'HomeController@blogDetay')->name('blog.detay');
     Route::get('/blog/{kategori?}', 'HomeController@blogKategori')->name('blog.kategori');
+
     Route::get('/kurumsal/{url?}', 'HomeController@kurumsalDetay')->name('kurumsal.detay');
 
     Route::get('/kitap/{kategori}/{url}', 'HomeController@kitapDetay')->name('kitap.detay');
@@ -25,6 +27,7 @@ use Spatie\Sitemap\SitemapGenerator;
     Route::get('/videogaleri', 'HomeController@video')->name('videolar');
     Route::get('/galeri/{url?}', 'HomeController@galeriDetay')->name('galeri.detay');
     Route::get('/fotogaleri', 'HomeController@galeri')->name('galeriler');
+
     Route::get('/iletisim', 'HomeController@iletisim')->name('iletisim');
 
     Route::group(["prefix"=>"go", 'middleware' => ['auth']],function() {
