@@ -13,7 +13,7 @@
                     <div class="col-sm-6 col-lg-3" style="">
                         <a href="{{ route('sinav.kategori', $item->slug) }}">
 
-                        <div class="img_hvr_box home7 three" style="background-image: url(https://www.laternamuzikkursu.com/upload/slider/67keman-dersi-karsiyaka.jpg);border:3px solid white">
+                        <div class="img_hvr_box home7 three" style="background-image: url({{ (!$row->getFirstMediaUrl('page')) ? '/frontend/resimyok.jpg': $row->getFirstMediaUrl('page', 'thumb')}});border:3px solid white">
                             <div class="overlay">
                                 <div class="details">
                                     <h4>{{ $item->title }}</h4>
