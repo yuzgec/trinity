@@ -2534,7 +2534,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
 }
 .banner-style-one .slide:before,
 .banner-style-two .slide:before{
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0,0,0,.4);
   bottom: 0;
   content: "";
   left: 0;
@@ -6254,6 +6254,7 @@ header.header-nav.menu_style_home_five.home11.style2.navbar-scrolltofixed.strick
 .blog_post .thumb:before{
   bottom: 0;
   content: "";
+  background-color: rgba(0,0,0,.4);
   position: absolute;
   right: 0;
   top: 0;
