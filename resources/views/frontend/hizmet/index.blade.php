@@ -161,16 +161,18 @@
                             </ul>
                         </div>
                     </div>
-                        <div class="blog_post mt-3">
-                            <div class="thumb">
-                                <img class="img-fluid" src="/frontend/images/hizmetpdf.jpg" alt="Müfredat İndir" width="100%">
-                            </div>
-                            <div class="details text-white">
-                                <i class="fa fa-file-pdf-o" style="font-size:30px"></i>
-                                <h5>{{ $Detay->getCategory->title }}</h5>
-                                <h4>Müfredat İndir</h4>
-                            </div>
+                    @if($Detay->getFirstMediaUrl('pdfcover') != null)
+                    <div class="blog_post mt-3">
+                        <div class="thumb">
+                            <img class="img-fluid" src="{{ $Detay->getFirstMediaUrl('pdfcover') }}" alt="Müfredat İndir" width="100%">
                         </div>
+                        <div class="details text-white">
+                            <i class="fa fa-file-pdf-o" style="font-size:30px"></i>
+                            <h5>{{ $Detay->getCategory->title }}</h5>
+                            <h4>{{ $Detay->title }} <br>Müfredat <br>İndir</h4>
+                        </div>
+                    </div>
+                    @endif
                     <div class="blog_category_widget mt-3">
                         <ul class="list-group">
                             <h4 class="title">{{ $Detay->getCategory->title }}</h4>

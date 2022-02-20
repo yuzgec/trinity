@@ -154,8 +154,6 @@
                     <div class="align-items-center text-center mt-2">
                         <a href="{{$Edit->getFirstMediaUrl('pdf')}}">{{ $Edit->title }} PDF Önizle</a>
                     </div>
-
-
                         <label class="form-check form-check-single form-switch mb-1"  >
                             <input class="form-check-input switch" type="checkbox" name="removepdf" value="0">
                             <span style="margin-left: 15px" class="">PDF Kaldır</span>
