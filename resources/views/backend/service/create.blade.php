@@ -70,17 +70,19 @@
     <script src="//cdn.ckeditor.com/4.17.1/full/ckeditor.js"></script>
     <script type="text/javascript">
 
+        CKEDITOR.plugins.addExternal('youtube', '/backend/libs/ck/youtube/plugin.js');
         CKEDITOR.replace( 'aciklama', {
             filebrowserUploadUrl: "{{ route('service.postUpload', ['_token' => csrf_token()]) }}",
             filebrowserUploadMethod: 'form',
-            height : 400,
+            extraPlugins: 'youtube',
+            height : 500,
             toolbar: [
                 { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold']},
                 { name: 'paragraph',items: [ 'BulletedList']},
                 { name: 'colors', items: [ 'TextColor' ]},
                 { name: 'styles', items: [ 'Format', 'FontSize']},
                 { name: 'links', items : [ 'Link', 'Unlink'] },
-                { name: 'insert', items : [ 'Image', 'Table']},
+                { name: 'insert', items : [ 'Image', 'Table', 'Youtube']},
                 { name: 'document', items : [ 'Source','Maximize' ]},
                 { name: 'clipboard', items : [ 'PasteText', 'PasteFromWord' ]},
             ],

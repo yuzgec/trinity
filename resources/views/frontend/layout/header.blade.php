@@ -19,7 +19,7 @@
     <div class="container">
         <nav>
             <div class="menu-toggle">
-                <img class="nav_logo_img img-fluid" src="/frontend/images/logob.png" alt="header-logo2.png">
+                <img class="nav_logo_img img-fluid" src="/frontend/images/logob.png" alt="Trinity College London Türkiye">
                 <button type="button" id="menu-btn">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -27,7 +27,7 @@
                 </button>
             </div>
             <a href="{{ route('home') }}" class="navbar_brand float-left dn-smd">
-                <img class="logo1 home7 img-fluid" src="/frontend/images/logob.png" alt="header-logo4.jpg" width="200px">
+                <img class="logo1 home7 img-fluid" src="/frontend/images/logob.png" alt="Trinity College London Türkiye" width="200px">
             </a>
             <div class="menu7_search home7 float-right">
                 <div class="search_overlay">
@@ -38,7 +38,7 @@
                         <a href="#" class="mk-fullscreen-close" id="mk-fullscreen-close-button"><i class="fa fa-times"></i></a>
                         <div id="mk-fullscreen-search-wrapper">
                             <form method="get" id="mk-fullscreen-searchform">
-                                <input type="text" value="" placeholder="Kurs veya Kitap Arayınız..." id="mk-fullscreen-search-input">
+                                <input type="text" value="" placeholder="Arama..." id="mk-fullscreen-search-input">
                                 <i class="flaticon-magnifying-glass fullscreen-search-icon"><input value="" type="submit"></i>
                             </form>
                         </div>

@@ -142,10 +142,11 @@
         $('input[type="checkbox"]').on('change', function(){
             this.value ^= 1;
         });
-
+        CKEDITOR.plugins.addExternal('youtube', '/backend/libs/ck/youtube/plugin.js');
         CKEDITOR.replace( 'aciklama', {
             filebrowserUploadUrl: "{{ route('service.postUpload', ['_token' => csrf_token()]) }}",
             filebrowserUploadMethod: 'form',
+            extraPlugins: 'youtube',
             height : 500,
             toolbar: [
                 { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold']},
@@ -153,7 +154,7 @@
                 { name: 'colors', items: [ 'TextColor' ]},
                 { name: 'styles', items: [ 'Format', 'FontSize']},
                 { name: 'links', items : [ 'Link', 'Unlink'] },
-                { name: 'insert', items : [ 'Image', 'Table']},
+                { name: 'insert', items : [ 'Image', 'Table', 'Youtube']},
                 { name: 'document', items : [ 'Source','Maximize' ]},
                 { name: 'clipboard', items : [ 'PasteText', 'PasteFromWord' ]},
             ],

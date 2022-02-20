@@ -71,7 +71,7 @@
                     </ul>
                 </li>
                 <li class="last">
-                    <a href="{{ route('home') }}"><span class="title">Bize Ulaşın</span></a>
+                    <a href="{{ route('iletisim') }}"><span class="title">Bize Ulaşın</span></a>
                 </li>
             </ul>
             <ul class="sign_up_btn pull-right dn-smd mt20">
@@ -93,7 +93,7 @@
         <a href="#" class="mk-fullscreen-close" id="mk-fullscreen-close-button"><i class="fa fa-times"></i></a>
         <div id="mk-fullscreen-search-wrapper">
             <form method="get" id="mk-fullscreen-searchform">
-                <input type="text" value="" placeholder="Search courses..." id="mk-fullscreen-search-input">
+                <input type="text" value="" placeholder="Arama..." id="mk-fullscreen-search-input">
                 <i class="flaticon-magnifying-glass fullscreen-search-icon"><input value="" type="submit"></i>
             </form>
         </div>
