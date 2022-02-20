@@ -8,8 +8,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12 text-center">
-                                        <h3 class="banner-title">How to enroll your chıld to a class?</h3>
-                                        <p>Known for its academic excellence the school offers departments and programs.</p>
+                                        <h3 class="banner-title">İletişim ve performans yoluyla fırsat yaratmak</h3>
                                     </div>
                                 </div>
                             </div>
@@ -18,13 +17,11 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12 text-center">
-                                        <h3 class="banner-title">Self EducatIon Resources and Infos</h3>
-                                        <p>Technology is brining a massive wave of evolution on learning things on different ways</p>
+                                        <h3 class="banner-title">İletişim ve performans yoluyla fırsat yaratmak</h3>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="carousel-btn-block banner-carousel-btn2">
                         <span class="carousel-btn left-btn"><i class="flaticon-left-arrow left"></i> </span>
