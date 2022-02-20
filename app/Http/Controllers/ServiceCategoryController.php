@@ -38,8 +38,8 @@ class ServiceCategoryController extends Controller
 
         $New->save();
 
-        if ($request->image) {
-            $New->addMedia($request->image)->toMediaCollection();
+        if ($request->hasFile('image')) {
+            $New->addMedia($request->image)->toMediaCollection('page');
         }
 
         if ($request->parent_id) {
@@ -84,8 +84,8 @@ class ServiceCategoryController extends Controller
         $Update->save();
 
         if ($request->hasFile('image')) {
-            $Update->media()->delete();
-            $Update->addMedia($request->image)->toMediaCollection();
+            $Update->media()->where('collection_name', 'page')->delete();
+            $Update->addMedia($request->image)->toMediaCollection('page');
         }
 
         if ($request->parent) {
