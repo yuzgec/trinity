@@ -89,6 +89,20 @@ class ServiceController extends Controller
             $Update->addMedia($request->image)->toMediaCollection('page');
         }
 
+        if ($request->hasFile('pdfcover')) {
+            $Update->media()->where('collection_name', 'pdfcover')->delete();
+            $Update->addMedia($request->pdfcover)->toMediaCollection('pdfcover');
+        }
+
+        if($request->removepdf == "1"){
+            $Update->media()->where('collection_name', 'pdf')->delete();
+        }
+
+        if ($request->hasFile('pdf')) {
+            $Update->media()->where('collection_name', 'pdf')->delete();
+            $Update->addMedia($request->pdf)->toMediaCollection('pdf');
+        }
+
         if($request->hasfile('gallery')) {
             foreach ($request->gallery as $item){
                 $Update->addMedia($item)->toMediaCollection('gallery');

@@ -4,7 +4,7 @@
             <div class="col-lg-12">
                 <div class="main-banner-wrapper home7">
                     <div class="banner-style-two owl-theme owl-carousel">
-                        <div class="slide slide-one" style="background-image: url(https://www.laternamuzikkursu.com/upload/slider/67keman-dersi-karsiyaka.jpg);">
+                        <div class="slide slide-one" style="background-image: url(https://www.laternamuzikkursu.com/upload/slider/522.jpg);">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12 text-center">

@@ -125,6 +125,46 @@
                 </div>
                 @endif
             </div>
+
+
+            <div class="card mt-2">
+                <div class="card-header">
+                    <h4 class="card-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-invoice" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                            <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+                            <line x1="9" y1="7" x2="10" y2="7"></line>
+                            <line x1="9" y1="13" x2="15" y2="13"></line>
+                            <line x1="13" y1="17" x2="15" y2="17"></line>
+                        </svg>
+                        Hizmet Müfredat
+                    </h4>
+                </div>
+                <div class="card-body justify-content-center align-items-center">
+                    <small>Müfredat Kapak Seçiniz</small>
+                    <div class="col">
+                        <img src="{{ (!$Edit->getFirstMediaUrl('pdfcover')) ? '/backend/resimyok.jpg': $Edit->getFirstMediaUrl('pdfcover')}}" class="img-fluid mb-2 mt-2" alt="Image">
+                    </div>
+                    <x-form-file label="Kapak" name="pdfcover"></x-form-file>
+                    <br>
+                    <small class="mt-2">Müfredat <b>PDF</b> Seçiniz</small>
+                    <x-form-file label="PDF" name="pdf"></x-form-file>
+                    @if($Edit->getFirstMediaUrl('pdf'))
+                    <div class="align-items-center text-center mt-2">
+                        <a href="{{$Edit->getFirstMediaUrl('pdf')}}">{{ $Edit->title }} PDF Önizle</a>
+                    </div>
+
+
+                        <label class="form-check form-check-single form-switch mb-1"  >
+                            <input class="form-check-input switch" type="checkbox" name="removepdf" value="0">
+                            <span style="margin-left: 15px" class="">PDF Kaldır</span>
+                        </label>
+                    @endif
+
+                </div>
+
+            </div>
         </div>
     </div>
 
