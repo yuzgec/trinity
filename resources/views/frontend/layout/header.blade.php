@@ -80,7 +80,7 @@
                                 <a href="#">{{ $item->title  }}</a>
                                 <ul>
                                     @foreach($Product_Categories->where('parent_id', $item->id) as $row)
-                                        <li><a href="{{route('kitap.detay', [$item->slug,$row->slug]) }}">{{ $row->title }}</a></li>
+                                        <li><a href="{{route('kitap.kategori', $row->slug) }}">{{ $row->title }}</a></li>
                                     @endforeach
                                 </ul>
                             </li>

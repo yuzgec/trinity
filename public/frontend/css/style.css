@@ -1766,8 +1766,8 @@ header.header-nav.menu_style_home_five .ace-responsive-menu li ul.cart.sub-menu 
   line-height: 20px;
 }
 header.header-nav.menu_style_home_five .ace-responsive-menu li ul.cart.sub-menu .dropdown_content .list_content .checkout_btns{
-  background-color: #ff1053;
-  border: 1px solid #ff1053;
+  background-color: #4e1b41;
+  border: 1px solid #4e1b41;
   float: right;
   line-height: 0;
   line-height: 20px;
@@ -2323,7 +2323,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
   box-shadow:0px 0px 50px 0px rgba(32, 32, 32, 0.15);
 }
 .mouse_scroll .icon span{
-  color: #ff1053;
+  color: #4e1b41;
   font-size: 16px;
 }
 .home-seven{
@@ -3321,7 +3321,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
   color: #4e1b41;
 }
 .home_icon_box.home6:hover .icon span{
-  color: #ff1053;
+  color: #4e1b41;
 }
 .home_icon_box.home6 p{
   color: #0a0a0a;
@@ -4488,7 +4488,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
   width: 90px;
 }
 .my_course_content_list .mc_content_list .details .mc_content h5.title span.style2{
-  background-color: #ff1053;
+  background-color: #4e1b41;
 }
 .my_course_content_list .mc_content_list .details .mc_content h5.title span .tag{
   color: #ffffff;
@@ -4567,7 +4567,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
   background-color: #4e1b41;
 }
 .view_edit_delete_list li:last-child {
-  background-color: #ff1053;
+  background-color: #4e1b41;
 }
 .view_edit_delete_list li {
   border-radius: 5px;
@@ -5449,7 +5449,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
   margin-top: -50px;
 }
 .home3_about_icon_box.two{
-  background-color: #ff1053;
+  background-color: #4e1b41;
   margin-top: -80px;
 }
 .home3_about_icon_box.three{
@@ -6468,7 +6468,7 @@ header.header-nav.menu_style_home_five.home11.style2.navbar-scrolltofixed.strick
 }
 .blog_post_home6_date .post_grid .post_date {
   border-radius: 5px;
-  background-color: #ff1053;
+  background-color: #4e1b41;
   color: #ffffff;
   float: left;
   height: 60px;
@@ -8073,7 +8073,7 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
   margin-bottom: 23px;
   margin-top: 23px;
   max-width: 234px;
-  border: 2px solid #ff1053;
+  border: 2px solid #4e1b41;
   -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -8081,14 +8081,14 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
 }
 .cart_btnss:hover{
   background-color: #ffffff;
-  border: 2px solid #ff1053;
-  color: #ff1053;
+  border: 2px solid #4e1b41;
+  color: #4e1b41;
 }
 .cart_btnss_white{
   background-color: #ffffff;
-  border: 2px solid #ff1053;
+  border: 2px solid #4e1b41;
   border-radius: 27px;
-  color: #ff1053;
+  color: #4e1b41;
   display: block;
   font-size: 15px;
   font-family: "Open Sans";
@@ -8102,7 +8102,7 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
     transition: all 0.3s ease;
 }
 .cart_btnss_white:hover{
-  background-color: #ff1053;
+  background-color: #4e1b41;
   color: #ffffff;
 }
 /*== Recent Post Widget Blog Page ==*/
@@ -9223,7 +9223,7 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
   outline: none;
 }
 .message_container .message_input form button.btn {
-  background-color: #ff1053;
+  background-color: #4e1b41;
   border: 1px solid #ffffff;
   border-radius: 5px;
   color: #ffffff;
@@ -10082,7 +10082,7 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
   color: #4e1b41;
 }
 .text-thm6 {
-  color: #ff1053;
+  color: #4e1b41;
 }
 .text-thm7 {
   color: #fe4a55;
@@ -10462,8 +10462,8 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
   color: #4e1b41; }
 
 .btn-thm3 {
-  background-color: #ff1053;
-  border: 2px solid #ff1053;
+  background-color: #4e1b41;
+  border: 2px solid #4e1b41;
   border: none;
   color: #ffffff;
   border-radius: 0px;
@@ -10475,8 +10475,8 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
 .btn-thm3:active,
 .btn-thm3:focus {
   background-color: #ffffff;
-  border-color: #ff1053;
-  color: #ff1053; }
+  border-color: #4e1b41;
+  color: #4e1b41; }
 
 .btn-thm4 {
   background-color: #23ad96;
@@ -12639,7 +12639,7 @@ body.translated{
   width: 100%;
 }
 .payment_widget_btn .btn-block:hover{
-  border: 1px solid #ff1053;
+  border: 1px solid #4e1b41;
 }
 .cart_page_form{
   border-style: solid;
@@ -12760,13 +12760,12 @@ body.translated{
 }
 .single_product{
   position: relative;
-  height: 550px;
 }
 .single_product .single_item{
   text-align: center;
 }
 .single_product .single_item .thumb{
-  padding-top: 70px;
+
 }
 .single_product .product_popup{
   border-radius: 50%;
@@ -12829,13 +12828,13 @@ body.translated{
   font-family: "Nunito";
   color: rgb(255, 255, 255);
   height: 55px;
-  border: 2px solid #ff1053;
-  width: 220px;
+  border: 2px solid #4e1b41;
+  width: 250px;
 }
 .shop_single_product_details .cart_btns button.btn:hover{
   background-color: #ffffff;
-  border: 2px solid #ff1053;
-  color: #ff1053;
+  border: 2px solid #4e1b41;
+  color: #4e1b41;
 }
 .shop_single_product_details .sspd_sku li a{
   font-size: 15px;

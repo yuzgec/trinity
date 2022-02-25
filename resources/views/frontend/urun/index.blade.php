@@ -9,11 +9,10 @@
         <div class="row">
             <div class="col-xl-6 offset-xl-3 text-center">
                 <div class="breadcrumb_content">
-                    <h1 class="text-white">{{ $Detay->getCategory->title }} - {{ $Detay->title }}</h1>
+                    <h1 class="text-white">{{ $Detay->title }}</h1>
                     <ol class="d-flex align-items-center justify-content-center">
                         <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-white">Anasayfa</a></li>
                         <li class="breadcrumb-item  text-white active">Kitaplar</li>
-                        <li class="breadcrumb-item  text-white active">{{ $Detay->getCategory->title }}</li>
                         <li class="breadcrumb-item text-white active" aria-current="page">{{ $Detay->title }}</li>
                     </ol>
                 </div>
@@ -37,17 +36,22 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6 col-lg-6 col-xl-4">
-                        <div class="shop_grid">
-                            <div class="thumb text-center">
-                                <img class="img-fluid" src="images/shop/1.png" alt="1.png">
+                    @foreach($Books as $book)
+                            <div class="col-sm-6 col-lg-6 col-xl-4">
+                                <a href="{{ route('kitap.detay', [$Detay->slug,$book->slug ]) }}" title="{{ $book->title }}">
+
+                                <div class="shop_grid">
+                                    <div class="thumb text-center">
+                                        <img class="img-fluid" src="{{ (!$book->getFirstMediaUrl('page')) ? '/frontend/resimyok.jpg': $book->getFirstMediaUrl('page')}}" alt="{{ $book->title }}">
+                                    </div>
+                                    <div class="details float-left">
+                                        <h4 class="item-tile">{{ $book->title }}</h4>
+                                    </div>
+                                </div>
+                                </a>
                             </div>
-                            <div class="details float-left">
-                                <h4 class="item-tile">SEO Tricks</h4>
-                            </div>
-                            <a class="cart_bag float-right" href="#"><span class="flaticon-shopping-bag"></span></a>
-                        </div>
-                    </div>
+
+                    @endforeach
 
                 </div>
             </div>

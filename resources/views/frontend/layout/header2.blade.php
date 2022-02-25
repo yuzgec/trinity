@@ -2,7 +2,7 @@
     <div class="container">
         <nav>
             <div class="menu-toggle">
-                <img class="nav_logo_img img-fluid" src="/frontend/images/logo2.png" alt="header-logo.png">
+                <img class="nav_logo_img img-fluid" src="/frontend/images/logo2.png" alt="Trinity London College Türkiye">
                 <button type="button" id="menu-btn">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -41,7 +41,7 @@
                                 <a href="#">{{ $item->title  }}</a>
                                 <ul>
                                     @foreach($Product_Categories->where('parent_id', $item->id) as $row)
-                                        <li><a href="{{route('kitap.detay', [$item->slug,$row->slug]) }}">{{ $row->title }}</a></li>
+                                        <li><a href="{{route('kitap.kategori', $row->slug) }}">{{ $row->title }}</a></li>
                                     @endforeach
                                 </ul>
                             </li>

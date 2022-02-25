@@ -24,6 +24,10 @@ class Product extends Model implements HasMedia
             ->logOnly(['title', 'slug']);
     }
 
+    public function books(){
+        return $this->hasMany(Service::class, 'id', 'service_id');
+    }
+
     public function getCategory(){
         return $this->belongsTo('App\Models\ProductCategory', 'category');
     }

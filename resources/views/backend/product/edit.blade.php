@@ -32,6 +32,9 @@
                 <div class="card-body">
                     <x-form-inputtext label="Başlık" name="title"></x-form-inputtext>
                     <x-form-select label="Kategori" name="category" :list="$Kategori"></x-form-select>
+                    <x-form-select label="Sınav" name="service_id" :list="$Hizmet"></x-form-select>
+                    <x-form-inputtext label="Barkod" name="sku"></x-form-inputtext>
+
                     <x-form-textarea label="Kısa Açıklama" name="short" :ck='null'></x-form-textarea>
                     <x-form-textarea label="Açıklama" name="desc"></x-form-textarea>
                     <div class="card-header mb-2">

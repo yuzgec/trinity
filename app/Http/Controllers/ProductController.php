@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ProductRequest;
 use App\Models\Product;
 use App\Models\ProductCategory;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -19,7 +20,8 @@ class ProductController extends Controller
     public function create()
     {
         $Kategori = ProductCategory::pluck('title', 'id');
-        return view('backend.product.create',  compact('Kategori'));
+        $Hizmet = Service::pluck('title', 'id');
+        return view('backend.product.create',  compact('Kategori', 'Hizmet'));
     }
 
 
@@ -31,13 +33,15 @@ class ProductController extends Controller
         $New->category = $request->category;
         $New->short = $request->short;
         $New->desc = $request->desc;
+        $New->service_id = $request->service_id;
+        $New->sku = $request->sku;
 
         $New->seo_desc = $request->seo_desc;
         $New->seo_key = $request->seo_key;
         $New->seo_title = $request->seo_title;
 
         if($request->hasfile('image')){
-            $New->addMedia($request->image)->toMediaCollection('product');
+            $New->addMedia($request->image)->toMediaCollection('page');
         }
 
         if($request->hasfile('gallery')) {
@@ -53,7 +57,6 @@ class ProductController extends Controller
 
     }
 
-
     public function show($id)
     {
         $Show = Product::findOrFail($id);
@@ -64,7 +67,9 @@ class ProductController extends Controller
     {
         $Edit = Product::findOrFail($id);
         $Kategori = ProductCategory::pluck('title', 'id');
-        return view('backend.product.edit', compact('Edit', 'Kategori'));
+        $Hizmet = Service::pluck('title', 'id');
+
+        return view('backend.product.edit', compact('Edit', 'Kategori', 'Hizmet'));
     }
 
     public function update(ProductRequest $request, $id)
@@ -75,18 +80,20 @@ class ProductController extends Controller
         $Update->category = $request->category;
         $Update->short = $request->short;
         $Update->desc = $request->desc;
+        $Update->service_id = $request->service_id;
+        $Update->sku = $request->sku;
 
         $Update->seo_title = $request->seo_title;
         $Update->seo_desc = $request->seo_desc;
         $Update->seo_key = $request->seo_key;
 
         if($request->removeImage == "1"){
-            $Update->media()->where('collection_name', 'product')->delete();
+            $Update->media()->where('collection_name', 'page')->delete();
         }
 
         if ($request->hasFile('image')) {
-            $Update->media()->where('collection_name', 'product')->delete();
-            $Update->addMedia($request->image)->toMediaCollection('product');
+            $Update->media()->where('collection_name', 'page')->delete();
+            $Update->addMedia($request->image)->toMediaCollection('page');
         }
 
         if($request->hasfile('gallery')) {

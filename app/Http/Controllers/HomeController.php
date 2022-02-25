@@ -34,16 +34,18 @@ class HomeController extends Controller
     }
 
     public function kitapKategori($url){
-        $Detay  = Product::with('getCategory')->where('slug', $url)->first();
-        $Books  = Product::where('slug', $url)->get();
+
+        $Detay  = ProductCategory::where('slug', $url)->first();
+        $Books  = Product::where('category', $Detay->id)->get();
         return view('frontend.urun.index', compact('Books', 'Detay'));
     }
 
     public function kitapDetay($kategori,$url){
+        //dd($kategori,$url);
         $Kategori = ProductCategory::where('slug', $kategori)->first();
-        $Detay = Product::with('getCategory')->where('slug', $url)->first();
-        dd($Detay);
-        return view('frontend.urun.detail', compact('Detay', 'Kategori'));
+        $Urun = Product::with(['books', 'getCategory'])->where('slug', $url)->first();
+        //dd($Urun);
+        return view('frontend.urun.detail', compact('Kategori', 'Urun'));
     }
 
     public function videoDetay(){
