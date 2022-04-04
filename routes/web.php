@@ -28,6 +28,9 @@ use Spatie\Sitemap\SitemapGenerator;
     Route::get('/galeri/{url?}', 'HomeController@galeriDetay')->name('galeri.detay');
     Route::get('/fotogaleri', 'HomeController@galeri')->name('galeriler');
 
+    Route::get('/egitmenler', 'HomeController@egitmenler')->name('egitmenler');
+
+
     Route::get('/iletisim', 'HomeController@iletisim')->name('iletisim');
 
     Route::group(["prefix"=>"go", 'middleware' => ['auth']],function() {

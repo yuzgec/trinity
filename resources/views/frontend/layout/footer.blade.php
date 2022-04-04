@@ -9,7 +9,7 @@
                     <p>{{ config('settings.email1') }}</p>
                 </div>
                 <div class="footer_contact_widget home12">
-                    <img class="logo1 home7 img-fluid" src="/frontend/images/logo.png" alt="header-logo4.jpg" width="200px">
+                    <img class="logo1 home7 img-fluid" src="/frontend/images/logo.png" alt="Trinity College London" width="200px">
                 </div>
                 <div class="footer_social_widget home12 mt15 text-left mb30-md ml20">
                     <ul>

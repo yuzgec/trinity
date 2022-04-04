@@ -8,6 +8,8 @@ use App\Models\Product;
 use App\Models\ProductCategory;
 use App\Models\Service;
 use App\Models\ServiceCategory;
+use App\Models\Team;
+use App\Models\TeamCategory;
 use App\Models\VideoCategory;
 use Illuminate\Http\Request;
 
@@ -20,7 +22,6 @@ class HomeController extends Controller
         return view('frontend.index', compact('Show'));
     }
 
-
     public function sinavKategori($url){
         $Kategori =  Service::whereRelation('getCategory', 'slug', '=', $url)->get();
         $Detay = ServiceCategory::where('slug', $url)->first();
@@ -30,6 +31,7 @@ class HomeController extends Controller
     public function sinavDetay($kategori,$url){
         $Kategori = ServiceCategory::where('slug', $kategori)->first();
         $Detay = Service::with('getCategory')->where('slug', $url)->first();
+
         return view('frontend.hizmet.index', compact('Detay'));
     }
 
@@ -52,6 +54,8 @@ class HomeController extends Controller
 
 
     }
+
+
 
     public function video(){
         $All = VideoCategory::all();
@@ -86,4 +90,11 @@ class HomeController extends Controller
     public function iletisim(){
         return view('frontend.iletisim');
     }
+
+    public function egitmenler(){
+        $All = Team::paginate(18);
+        $AllCategories = TeamCategory::all();
+        return view('frontend.egitmen.index', compact('All', 'AllCategories'));
+    }
+
 }
