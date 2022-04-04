@@ -41,8 +41,14 @@ class TeamController extends Controller
         $New->seo_key = $request->seo_key;
         $New->seo_title = $request->seo_title;
 
-        if($request->image){
-            $New->addMedia($request->image)->toMediaCollection();
+        if($request->hasfile('image')){
+            $New->addMedia($request->image)->toMediaCollection('page');
+        }
+
+        if($request->hasfile('gallery')) {
+            foreach ($request->gallery as $item){
+                $New->addMedia($item)->toMediaCollection('gallery');
+            }
         }
 
         $New->save();
@@ -84,9 +90,19 @@ class TeamController extends Controller
         $Update->seo_key = $request->seo_key;
         $Update->save();
 
+        if($request->removeImage == "1"){
+            $Update->media()->where('collection_name', 'page')->delete();
+        }
+
         if ($request->hasFile('image')) {
-            $Update->media()->delete();
-            $Update->addMedia($request->image)->toMediaCollection();
+            $Update->media()->where('collection_name', 'page')->delete();
+            $Update->addMedia($request->image)->toMediaCollection('page');
+        }
+
+        if($request->hasfile('gallery')) {
+            foreach ($request->gallery as $item){
+                $Update->addMedia($item)->toMediaCollection('gallery');
+            }
         }
 
         toast(SWEETALERT_MESSAGE_UPDATE,'success');
