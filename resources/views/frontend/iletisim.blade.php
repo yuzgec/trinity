@@ -84,6 +84,67 @@
                         </form>
                     </div>
                 </div>
+
+                <div class="row mt-5">
+                    <div class="col-lg-12">
+                        <div class="my_course_content_container">
+                            <div class="my_setting_content">
+                                <div class="my_setting_content_details">
+                                    <div class="cart_page_form style3">
+                                        <table class="table table-hover table-striped mb-2" style="width: 100%">
+                                            <thead>
+                                            <tr class="carttable_row">
+                                                <th class="cartm_title">Şube Adı</th>
+                                                <th class="cartm_title">Telefon</th>
+                                                <th class="cartm_title">Whatsapp</th>
+                                                <th class="cartm_title">Email</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody class="table_body">
+                                            <tr>
+                                                <td>Laterna Müzik Kursu (Merkez)</td>
+                                                <td>0 532 675 65 95</td>
+                                                <td>0 232 382 05 25</td>
+                                                <td>info@trinitycollegelondontr.com</td>
+                                            </tr>
+                                            </tbody>
+
+                                        </table>
+                                        <p class="text-center">1775/6 sokak No:4A Karşıyaka-İZMİR</p>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6248.357535181902!2d27.105607!3d38.460434!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf7ba242d63d8188e!2s%C3%96zel%20Laterna%20M%C3%BCzik%20Kursu!5e0!3m2!1str!2str!4v1649046676306!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+
+                                    <div class="cart_page_form style3">
+                                        <table class="table table-hover table-striped mb-2" style="width: 100%">
+                                            <thead>
+                                            <tr class="carttable_row">
+                                                <th class="cartm_title">Şube Adı</th>
+                                                <th class="cartm_title">Telefon</th>
+                                                <th class="cartm_title">Whatsapp</th>
+                                                <th class="cartm_title">Email</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody class="table_body">
+                                            <tr>
+                                                <td>Laterna Müzik Kursu (Merkez)</td>
+                                                <td>0 532 675 65 95</td>
+                                                <td>0 232 382 05 25</td>
+                                                <td>info@trinitycollegelondontr.com</td>
+                                            </tr>
+                                            </tbody>
+
+                                        </table>
+                                        <p class="text-center"><b>Merkezefendi Mh. Şirinköy Yolu (Eski Sürücü Aday Pisti Yolu) Böğürtlen Sk. No:13 Merkezefendi / DENİZLİ</b></p>
+
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6248.357535181902!2d27.105607!3d38.460434!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf7ba242d63d8188e!2s%C3%96zel%20Laterna%20M%C3%BCzik%20Kursu!5e0!3m2!1str!2str!4v1649046676306!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </section>
 @endsection

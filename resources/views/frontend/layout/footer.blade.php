@@ -23,13 +23,13 @@
                 <div class="footer_company_widget home12 pl30 pl0-lg">
                     <h4>KURUMSAL</h4>
                     <ul class="list-unstyled">
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Hakkımızda</a></li>
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Sertfikasyon</a></li>
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Eğitmenler</a></li>
+                        <li><a href="{{ route('kurumsal.detay', 'hakkimizda') }}"><i class="flaticon-right-arrow-1 right"></i> Hakkımızda</a></li>
+                        <li><a href="{{ route('kurumsal.detay', 'sertfikasyon') }}"><i class="flaticon-right-arrow-1 right"></i> Sertfikasyon</a></li>
+                        <li><a href="{{ route('egitmenler') }}"><i class="flaticon-right-arrow-1 right"></i> Eğitmenler</a></li>
                         <li><a href="{{ route('videolar') }}"><i class="flaticon-right-arrow-1 right"></i> Video Galeri</a></li>
                         <li><a href="{{ route('galeriler') }}"><i class="flaticon-right-arrow-1 right"></i> Foto Galeri</a></li>
                         <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Temsilci Ol</a></li>
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> İ.K.</a></li>
+                        <li><a href="{{ route('kurumsal.detay', 'ik') }}"><i class="flaticon-right-arrow-1 right"></i> İ.K.</a></li>
                         <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> S.S.S</a></li>
 
                     </ul>

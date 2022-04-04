@@ -45,12 +45,12 @@
                     <div class="row">
                         @foreach($All as $item)
                         <div class="col-sm-6 col-lg-6 col-xl-4">
-                            <div class="team_member style3 text-center mb30">
+                            <div class="team_member style2 text-center">
                                 <div class="instructor_col">
-                                    <div class="thumb">
+                                    <div class="">
                                         <img src="{{ (!$item->getFirstMediaUrl('page')) ? '/frontend/resimyok.jpg': $item->getFirstMediaUrl('page')}}" alt="{{ $item->title }}" class="img-fluid">
                                     </div>
-                                    <div class="details">
+                                    <div class="details mt-3">
                                         <h4>{{ $item->title }}</h4>
                                         <p>{{ $item->master }}</p>
                                     </div>
@@ -86,7 +86,7 @@
                                             @foreach($AllCategories as $item)
                                             <div class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck14">
-                                                <label class="custom-control-label" for="customCheck14">{{ $item->title }} <span class="float-right">(03)</span></label>
+                                                <label class="custom-control-label" for="customCheck14">{{ $item->title }}</label>
                                             </div>
                                             @endforeach
                                         </div>

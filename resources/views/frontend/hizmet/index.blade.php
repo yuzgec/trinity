@@ -33,7 +33,7 @@
                                 {!! $Detay->desc !!}
                             </div>
                         </div>
-                        <div class="cs_row_three">
+                    {{--    <div class="cs_row_three">
                             <div class="course_content">
                                 <div class="cc_headers">
                                     <h4 class="title">Course Content</h4>
@@ -132,7 +132,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>--}}
 
                     </div>
                 </div>

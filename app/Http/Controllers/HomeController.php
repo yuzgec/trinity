@@ -82,8 +82,9 @@ class HomeController extends Controller
 
     }
 
-    public function kurumsalDetay(){
-
+    public function kurumsalDetay($url){
+        $Detay = Page::where('slug', $url)->first();
+        return view('frontend.kurumsal.index', compact('Detay'));
 
     }
 
