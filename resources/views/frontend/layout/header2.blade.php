@@ -62,11 +62,11 @@
                 <li>
                     <a href="#"><span class="title">Kurumsal</span></a>
                     <ul>
-                        <li><a href="page-blog-v1.html">Hakkımızda</a></li>
-                        <li><a href="page-blog-v1.html">Sertfikasyon</a></li>
+                        <li><a href="{{ route('kurumsal.detay', 'hakkimizda') }}">Hakkımızda</a></li>
+                        <li><a href="{{ route('kurumsal.detay', 'sertfikasyon') }}">Sertfikasyon</a></li>
                         <li><a href="{{ route('egitmenler') }}">Eğitmenler</a></li>
                         <li><a href="{{ route('egitmenler') }}">Temsilci Ol</a></li>
-                        <li><a href="page-blog-v1.html">İ.K.</a></li>
+                        <li><a href="{{ route('kurumsal.detay', 'ik') }}">İ.K</a></li>
                         <li><a href="page-blog-v1.html">S.S.S</a></li>
                     </ul>
                 </li>
