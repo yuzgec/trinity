@@ -31,7 +31,8 @@
                 <div class="col-lg-6 col-xl-6">
                     <div class="row">
                         <div class="col-sm-6 col-lg-6">
-                            <div class="home3_about_icon_box one">
+                            <a href="https://www.artscouncil.org.uk/" title="ARTS COUNCIL ENGLAND" target="_blank">
+                                <div class="home3_about_icon_box one">
                                 <span class="icon text-center">
                                     <svg viewBox="0 0 100 99" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
                                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
@@ -52,12 +53,13 @@
                                     </svg>
                                 </span>
                                 <div class="details">
-
-                                    <p>Sed cursus turpis vitae tortor donec eaque ipsa quaeab illo.</p>
+                                    <p>ULUSAL YARATICILIK VE KÜLTÜR AJANSI</p>
                                 </div>
                             </div>
+                            </a>
                         </div>
                         <div class="col-sm-6 col-lg-6">
+                            <a href="https://www.ucas.com/" title="UCAS" target="_blank">>
                             <div class="home3_about_icon_box two">
                                 <span class="icon">
                                     <svg version="1.1" id="svg2" xmlns:svg="http://www.w3.org/2000/svg"
@@ -74,30 +76,35 @@
                                 </span>
                                 <div class="details">
 
-                                    <p>Sed cursus turpis vitae tortor donec eaque ipsa quaeab illo.</p>
+                                    <p>ÜNİVERSİTELER VE KOLEJLER ARASI KABUL SERVİSİ</p>
                                 </div>
                             </div>
+                            </a>
                         </div>
                         <div class="col-sm-6 col-lg-6">
-                            <div class="home3_about_icon_box three">
-                                <span class="icon">
-                                    <img src="/frontend/images/ofqual.png">
-                                </span>
-                                <div class="details">
+                            <a href="https://www.gov.uk/" title="OFQUEL" target="_blank">>
+                                <div class="home3_about_icon_box three">
+                                    <span class="icon">
+                                        <img src="/frontend/images/ofqual.png">
+                                    </span>
+                                    <div class="details">
 
-                                    <p>Sed cursus turpis vitae tortor donec eaque ipsa quaeab illo.</p>
+                                        <p>SINAV YÖNETMELİKLERİ VE YETERLİLİKLERİ OFİSİ</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-sm-6 col-lg-6 align-items-center" style="margin-top:-70px">
-                            <div class="home3_about_icon_box four">
-                                <span class="icon align-items-center ">
-                                    <img src="/frontend/images/openuni.png"  class="text-center">
-                                </span>
-                                <div class="details">
-                                    <p>Sed cursus turpis vitae tortor donec eaque ipsa quaeab illo.</p>
+                            <a href="https://www.open.ac.uk/" title="THE OPEN UNIVERSITY" target="_blank">>
+                                <div class="home3_about_icon_box four">
+                                    <span class="icon align-items-center ">
+                                        <img src="/frontend/images/openuni.png"  class="text-center">
+                                    </span>
+                                    <div class="details">
+                                        <p>THE OPEN UNIVERSITY</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -106,11 +113,25 @@
                     <div class="about_box_home6">
                         <div class="details">
                             <h3>Trinity Türkiye Sınav Merkezi</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            <a class="btn dbxshad btn-lg btn-thm2 rounded" href="#">Devamını Oku</a>
+
+                            <p>Trinity College London, zengin bir kültürel mirasa ve değerlendirme ve geliştirmeye yönelik olumlu,
+                                destekleyici bir yaklaşıma sahip uluslararası bir sınav kuruludur. Bizi diğerlerinden ayıran şey,
+                                öğrenene odaklanmamız ve esnek öğrenme ve öğretme tarzlarının sunulmasına dayalı yenilik ve başarı
+                                konusundaki güçlü itibarımızdır. İngilizce dili, iletişim becerileri, müzik ve drama dahil olmak üzere
+                                çeşitli iletişim temelli konularda tanınmış ve saygı duyulan nitelikler sunuyoruz.</p>
+
+                            <p>Sınavlarımız ve değerlendirmelerimiz, öğrencilerin kendi bireysel yeteneklerini ve
+                                becerilerini gerçekleştirmelerine yardımcı olmak için tasarlanmıştır. Bugün, dünya çapında her
+                                yıl 850.000'den fazla değerlendirme sunuyoruz. Uluslararası ağımız hızla genişliyor ve şimdi dünya
+                                çapında 60'tan fazla ülkede yeterlilikler sağlıyoruz.</p>
+
+                            <p>Trinity sınavları, Ofqual (Yeterlilikler ve Sınavlar Yönetmeliği Ofisi) tarafından düzenlenir ve dünya çapında tanınır.</p>
+
+                            <p>Trinity, adayları sınavlarına hazırlayan öğretmenler için kapsamlı kaynaklar ve destek sağlar ve bu kaynakların en
+                                yüksek kalitede olmasını sağlamak için genellikle diğer kuruluşlarla ortak çalışır.</p>
+{{--
+                           <a class="btn dbxshad btn-lg btn-thm2 rounded" href="#">Devamını Oku</a>
+--}}
                         </div>
                     </div>
                 </div>
