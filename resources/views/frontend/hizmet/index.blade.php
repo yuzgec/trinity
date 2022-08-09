@@ -138,7 +138,7 @@
                 </div>
 
                 <div class="col-lg-4 col-xl-3 pl-lg-0 pr-lg-0">
-                    <div class="sidebar_course_widget style2">
+                    {{--<div class="sidebar_course_widget style2">
                         <div class="course_list_details">
                             <a class="btn btn-block buy_now_btn dbxshad btn-lg btn-thm3 mt20" href="#">İletişime Geç</a>
                             <ul class="icon-box-list mt20 mb0">
@@ -160,10 +160,10 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div>--}}
                     @if($Detay->getFirstMediaUrl('pdfcover') != null)
                         <a href="{{ $Detay->getFirstMediaUrl('pdf') }}" target="_blank" title="{{ $Detay->title }} Müfredat İndir">
-                        <div class="blog_post mt-3">
+                        <div class="blog_post">
                             <div class="thumb">
                                 <img class="img-fluid" src="{{ $Detay->getFirstMediaUrl('pdfcover') }}" alt="Müfredat İndir" width="100%">
                             </div>

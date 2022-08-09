@@ -12,19 +12,20 @@
                 @foreach($Service_Categories as $item)
                     <div class="col-sm-6 col-lg-3" style="">
                         <a href="{{ route('sinav.kategori', $item->slug) }}">
-
-                        <div class="img_hvr_box home7 three" style="background-image: url({{ (!$item->getFirstMediaUrl('page')) ? '/frontend/resimyok.jpg': $item->getFirstMediaUrl('page', 'thumb')}});border:3px solid white">
-                            <div class="overlay">
-                                <div class="details">
-                                    <h4>{{ $item->title }}</h4>
-                                    <p>Trinity College London</p>
+                            <div class="img_hvr_box home7 three"
+                                 style="background-image: url({{ (!$item->getFirstMediaUrl('page')) ? '/frontend/resimyok.jpg': $item->getFirstMediaUrl('page', 'thumb')}});
+                                 border:3px solid white">
+                                <div class="overlay">
+                                    <div class="details">
+                                        <h4>{{ $item->title }}</h4>
+                                        <p>Trinity College London</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </a>
                     </div>
-
                 @endforeach
+
             </div>
 
             <div class="row mt60">
@@ -75,20 +76,18 @@
                                     </svg>
                                 </span>
                                 <div class="details">
-
                                     <p>ÜNİVERSİTELER VE KOLEJLER ARASI KABUL SERVİSİ</p>
                                 </div>
                             </div>
                             </a>
                         </div>
                         <div class="col-sm-6 col-lg-6">
-                            <a href="https://www.gov.uk/" title="OFQUEL" target="_blank">>
+                            <a href="https://www.gov.uk/" title="OFQUEL" target="_blank">
                                 <div class="home3_about_icon_box three">
                                     <span class="icon">
                                         <img src="/frontend/images/ofqual.png">
                                     </span>
                                     <div class="details">
-
                                         <p>SINAV YÖNETMELİKLERİ VE YETERLİLİKLERİ OFİSİ</p>
                                     </div>
                                 </div>
@@ -138,6 +137,52 @@
 
             </div>
 
+
+            <div class="row">
+                <div class="becomea_instructor_home3 style2">
+                    <div class="col-lg-12">
+                    <div class="row">
+
+                        <div class="col-12 col-lg-4">
+                            <p>
+                                “Trinity College London, zengin bir kültürel mirasa ve değerlendirme ve geliştirmeye yönelik olumlu,
+                                destekleyici bir yaklaşıma sahip uluslararası bir sınav kuruludur.”
+                            </p>
+                        </div>
+
+                        <div class="col-12 col-lg-4">
+                            <p>“Bizi diğerlerinden ayıran şey, öğrenene odaklanmamız ve esnek öğrenme ve öğretme tarzlarının
+                                sunulmasına dayalı yenilik ve başarı konusundaki güçlü itibarımızdır.”
+                            </p>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <p>“Sınavlarımız ve değerlendirmelerimiz, öğrencilerin kendi bireysel yeteneklerini ve becerilerini
+                                gerçekleştirmelerine yardımcı olmak için tasarlanmıştır.”
+                            </p>
+                        </div>
+                        <div class="col-12 ">
+                            <hr style="border:1px solid white">
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <p>“Bugün, dünya çapında her yıl 850.000'den fazla değerlendirme sunuyoruz.
+                                Uluslararası ağımız hızla genişliyor ve şimdi dünya çapında 60'tan fazla ülkede yeterlilikler sağlıyoruz.”
+                            </p>
+                        </div>
+
+                        <div class="col-12 col-lg-4">
+                            <p>“Trinity, adayları sınavlarına hazırlayan öğretmenler için kapsamlı kaynaklar ve destek sağlar ve bu
+                                kaynakların en yüksek kalitede olmasını sağlamak için genellikle diğer kuruluşlarla ortak çalışır.”
+                            </p>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <p>“Önde gelen uluslararası sınav kurulu ve bağımsız eğitim yardım kuruluşu Trinity College London,
+                                2022'de 150. yılını kutlamaktan mutluluk duyuyor.”
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -178,6 +223,26 @@
                             @endforeach
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="becomea_instructor_home3 style1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="app_grid">
+                        <h1 class="mt0">TRINITY COLLEGE LONDON 150. YILI</h1>
+                        <p style="font-size:24px">“Önümüzdeki aylarda 150. yılımızı ve mirasımızı kutlayacağız. Her yıl İngilizce, Müzik ve Drama alanlarında
+                            Trinity yeterliliklerini alan dünya çapında 60'tan fazla ülkede 850.000 aday için Trinity'nin ne anlama
+                            geldiğini yansıtan haberlere ve sosyal medya hikayelerine göz atın.“
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <img class="img-fluid" src="{{ asset('/frontend/images/150.png') }}" alt="TRINITY COLLEGE LONDON 150. YILI">
                 </div>
             </div>
         </div>

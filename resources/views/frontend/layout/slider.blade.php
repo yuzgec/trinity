@@ -8,7 +8,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12 text-center">
-                                        <h3 class="banner-title">İletişim ve performans yoluyla fırsat yaratmak</h3>
+                                        <h3 class="banner-title">Hayallerindeki yurtdışı eğitimine bir adım daha yaklaş.</h3>
                                     </div>
                                 </div>
                             </div>
@@ -17,7 +17,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12 text-center">
-                                        <h3 class="banner-title">İletişim ve performans yoluyla fırsat yaratmak</h3>
+                                        <h3 class="banner-title">Çocuğunuzun geleceği için Trinity College London Music Sertifika programına hemen kaydını yaptır.</h3>
                                     </div>
                                 </div>
                             </div>
