@@ -6,9 +6,9 @@
                 <ul class="sign_up_btn home7 dn-smd text-right">
                     <li class="list-inline-item"><a class="light_white" href="#">{{ config('settings.telefon1') }}</a></li>
                     <li class="list-inline-item"><a class="light_white" href="#">{{ config('settings.email1') }}</a></li>
-                    <li class="list-inline-item"><a class="light_white" href="#">S.S.S</a></li>
+                    <li class="list-inline-item"><a class="light_white" href="{{ route('sss') }}">S.S.S</a></li>
                     <li class="list-inline-item"><a class="light_white" href="#">Yardım</a></li>
-                    <li class="list-inline-item"><a class="light_white" href="#">Temsilci Ol</a></li>
+                    <li class="list-inline-item"><a class="light_white" href="{{ route('temsilciol') }}">Temsilci Ol</a></li>
                 </ul>
             </div>
         </div>
@@ -19,7 +19,9 @@
     <div class="container">
         <nav>
             <div class="menu-toggle">
-                <img class="nav_logo_img img-fluid" src="/frontend/images/logob.png" alt="Trinity College London Türkiye">
+                <a href="{{ route('home') }}" title="Trinity College London Türkiye">
+                    <img class="nav_logo_img img-fluid" src="/frontend/images/logob.png" alt="Trinity College London Türkiye">
+                </a>
                 <button type="button" id="menu-btn">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -66,10 +68,10 @@
                     <ul>
                         <li><a href="{{ route('kurumsal.detay', 'hakkimizda') }}">Hakkımızda</a></li>
                         <li><a href="{{ route('kurumsal.detay', 'sertfikasyon') }}">Sertfikasyon</a></li>
-                        <li><a href="{{ route('egitmenler') }}">Eğitmenler</a></li>
-                        <li><a href="{{ route('egitmenler') }}">Temsilci Ol</a></li>
-                        <li><a href="page-blog-v1.html">İ.K.</a></li>
-                        <li><a href="page-blog-v1.html">S.S.S</a></li>
+                        <li><a href="{{ route('egitmenol') }}">Eğitmen Ol</a></li>
+                        <li><a href="{{ route('temsilciol') }}">Temsilci Ol</a></li>
+                        <li><a href="{{ route('ik') }}">İ.K.</a></li>
+                        <li><a href="{{ route('sss') }}">S.S.S</a></li>
                     </ul>
                 </li>
                 <li class="list_three">

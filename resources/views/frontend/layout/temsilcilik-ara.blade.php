@@ -5,7 +5,9 @@
                 <div class="bi_grid">
                     <h3>Temsilci Ol</h3>
                     <p></p>
-                    <a class="btn btn-white" href="#">Detaylı Bilgi<span class="flaticon-right-arrow-1"></span></a>
+                    <a class="btn btn-white" href="{{ route('temsilciol') }}">
+                        Detaylı Bilgi<span class="flaticon-right-arrow-1"></span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -14,7 +16,9 @@
                 <div class="bi_grid">
                     <h3>Eğitmen Ol</h3>
                     <p></p>
-                    <a class="btn btn-white" href="#">Detaylı Bilgi<span class="flaticon-right-arrow-1"></span></a>
+                    <a class="btn btn-white" href="{{ route('egitmenol') }}">
+                        Detaylı Bilgi<span class="flaticon-right-arrow-1"></span>
+                    </a>
                 </div>
             </div>
         </div>

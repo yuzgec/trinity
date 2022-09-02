@@ -31,40 +31,31 @@ class HomeController extends Controller
     public function sinavDetay($kategori,$url){
         $Kategori = ServiceCategory::where('slug', $kategori)->first();
         $Detay = Service::with('getCategory')->where('slug', $url)->first();
-
         return view('frontend.hizmet.index', compact('Detay'));
     }
 
     public function kitapKategori($url){
-
         $Detay  = ProductCategory::where('slug', $url)->first();
         $Books  = Product::where('category', $Detay->id)->get();
         return view('frontend.urun.index', compact('Books', 'Detay'));
     }
 
     public function kitapDetay($kategori,$url){
-        //dd($kategori,$url);
         $Kategori = ProductCategory::where('slug', $kategori)->first();
         $Urun = Product::with(['books', 'getCategory'])->where('slug', $url)->first();
-        //dd($Urun);
         return view('frontend.urun.detail', compact('Kategori', 'Urun'));
     }
 
     public function videoDetay(){
 
-
     }
-
-
 
     public function video(){
         $All = VideoCategory::all();
-        //dd($All);
         return view('frontend.video.index', compact('All'));
     }
 
     public function galeriDetay(){
-
 
     }
 
@@ -75,10 +66,8 @@ class HomeController extends Controller
 
     public function blogDetay(){
 
-
     }
     public function blogKategori(){
-
 
     }
 
@@ -97,5 +86,18 @@ class HomeController extends Controller
         $AllCategories = TeamCategory::all();
         return view('frontend.egitmen.index', compact('All', 'AllCategories'));
     }
+
+    public function temsilciol(){
+        return view('frontend.kurumsal.temsilciol');
+    }
+
+    public function egitmenol(){
+        return view('frontend.kurumsal.egitmenol');
+    }
+
+    public function sss(){
+        return view('frontend.sss.index');
+    }
+
 
 }

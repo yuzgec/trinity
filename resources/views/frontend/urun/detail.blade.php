@@ -52,8 +52,18 @@
                         <h3 class="title">{{ $Urun->title }}</h3>
                         <p class="mb20">{{ $Urun->short }}</p>
                         <ul class="cart_btns ui_kit_button mb30">
-                            <li class="list-inline-item"><button type="button" class="btn btn-success" style="background-color:seagreen"><i class="fa fa-whatsapp"></i> Whatsapp Bilgi </button></li>
-                            <li class="list-inline-item"><button type="button" class="btn"><i class="fa fa-shopping-cart"></i> Bragi Eğitim Satın AL</button></li>
+
+                            <li class="list-inline-item">
+                                <a href="https://api.whatsapp.com/send?phone={{ config('setting.whatsapp1') }}&text=Merhaba sipariş vermek istiyorum.
+                                {{ $Urun->title }} {{url()->full()}}" class="btn btn-success" style="background-color:seagreen">
+                                    <i class="fa fa-whatsapp"></i> Whatsapp Bilgi
+                                </a>
+                            </li>
+
+                            <li class="list-inline-item"><a href="https://www.bragiegitim.com/{{ $Urun->slug }}" class="btn" target="_blank">
+                                <i class="fa fa-shopping-cart"></i>
+                                Bragi Eğitim Satın AL</a>
+                            </li>
                         </ul>
                         <ul class="sspd_sku mb20">
                             <li><a href="#"><b>Barkod:</b> {{ $Urun->sku }}</a></li>

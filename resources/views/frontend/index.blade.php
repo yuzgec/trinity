@@ -60,7 +60,7 @@
                             </a>
                         </div>
                         <div class="col-sm-6 col-lg-6">
-                            <a href="https://www.ucas.com/" title="UCAS" target="_blank">>
+                            <a href="https://www.ucas.com/" title="UCAS" target="_blank">
                             <div class="home3_about_icon_box two">
                                 <span class="icon">
                                     <svg version="1.1" id="svg2" xmlns:svg="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@
                             </a>
                         </div>
                         <div class="col-sm-6 col-lg-6">
-                            <a href="https://www.gov.uk/" title="OFQUEL" target="_blank">
+                            <a href="https://www.gov.uk/government/organisations/ofqual" title="OFQUEL" target="_blank">
                                 <div class="home3_about_icon_box three">
                                     <span class="icon">
                                         <img src="/frontend/images/ofqual.png">

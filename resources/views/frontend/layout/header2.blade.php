@@ -2,7 +2,9 @@
     <div class="container">
         <nav>
             <div class="menu-toggle">
-                <img class="nav_logo_img img-fluid" src="/frontend/images/logo2.png" alt="Trinity London College Türkiye">
+                <a href="{{ route('home') }}" title="Trinity College London Türkiye">
+                    <img class="nav_logo_img img-fluid" src="/frontend/images/logo2.png" alt="Trinity London College Türkiye">
+                </a>
                 <button type="button" id="menu-btn">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -64,10 +66,10 @@
                     <ul>
                         <li><a href="{{ route('kurumsal.detay', 'hakkimizda') }}">Hakkımızda</a></li>
                         <li><a href="{{ route('kurumsal.detay', 'sertfikasyon') }}">Sertfikasyon</a></li>
-                        <li><a href="{{ route('egitmenler') }}">Eğitmenler</a></li>
-                        <li><a href="{{ route('egitmenler') }}">Temsilci Ol</a></li>
-                        <li><a href="{{ route('kurumsal.detay', 'ik') }}">İ.K</a></li>
-                        <li><a href="page-blog-v1.html">S.S.S</a></li>
+                        <li><a href="{{ route('egitmenol') }}">Eğitmen Ol</a></li>
+                        <li><a href="{{ route('temsilciol') }}">Temsilci Ol</a></li>
+                        <li><a href="{{ route('ik') }}">İ.K.</a></li>
+                        <li><a href="{{ route('sss') }}">S.S.S</a></li>
                     </ul>
                 </li>
                 <li class="last">
