@@ -17,7 +17,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12 text-center">
-                                        <h3 class="banner-title">Çocuğunuzun geleceği için Trinity College London Music Sertifika programına hemen kaydını yaptır.</h3>
+                                        <h3 class="banner-title">Müzik tutkuna engel olma!</h3>
                                     </div>
                                 </div>
                             </div>

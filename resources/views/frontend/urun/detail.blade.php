@@ -1,7 +1,6 @@
 @extends('frontend.layout.app')
 @section('title', $Urun->title.' | Trinity College London Türkiye Kitapları')
 @section('content')
-@section('header')
     @include('frontend.layout.header2')
 
     <section class="inner_page_breadcrumb style2 blog_grid_bg_color" style="background-image: url('/frontend/images/headerback.png')">
@@ -60,7 +59,7 @@
                                 </a>
                             </li>
 
-                            <li class="list-inline-item"><a href="https://www.bragiegitim.com/{{ $Urun->slug }}" class="btn" target="_blank">
+                            <li class="list-inline-item"><a href="https://www.bragiegitim.com/" class="btn" target="_blank">
                                 <i class="fa fa-shopping-cart"></i>
                                 Bragi Eğitim Satın AL</a>
                             </li>
