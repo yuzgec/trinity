@@ -21,15 +21,18 @@
         </div>
     </section>
 
-    <div class="row mt60">
-        <div class="col-lg-6 col-12">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/mZgKzpvWUYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+    <div class="container">
 
-        <div class="col-lg-6 col-12">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Na5BlG4Ehlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        <div class="row mt60">
+            <div class="col-lg-6 col-12">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/mZgKzpvWUYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
 
+            <div class="col-lg-6 col-12">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Na5BlG4Ehlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+        </div>
     </div>
 
 @endsection
