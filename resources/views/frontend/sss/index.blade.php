@@ -28,15 +28,14 @@
                         <div class="panel">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a href="#panel{{ $item->id }}" class="accordion-toggle link fz20 mb15" data-toggle="collapse" data-parent="#accordion">Why won't my payment go through?</a>
+                                    <a href="#panel{{ $item->id }}" class="accordion-toggle link fz20 mb15" data-toggle="collapse" data-parent="#accordion">{{ $item->title }}</a>
                                 </h4>
                             </div>
                             <div id="panel{{ $item->id }}" class="panel-collapse collapse show">
                                 <div class="panel-body">
-                                    <h4>{{ $item->title }}</h4>
                                     <div class="mb25">
                                         {!! $item->desc !!}
-                                    <div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -47,5 +46,4 @@
             </div>
         </div>
      </div>
-    </div>
 @endsection
