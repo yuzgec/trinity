@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use App\Models\GalleryCategory;
 use App\Models\Page;
 use App\Models\Product;
