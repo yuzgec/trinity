@@ -96,7 +96,8 @@ class HomeController extends Controller
     }
 
     public function sss(){
-        return view('frontend.sss.index');
+        $All = Faq::all();
+        return view('frontend.sss.index', compact('All'));
     }
 
 
