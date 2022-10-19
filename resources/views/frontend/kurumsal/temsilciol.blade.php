@@ -3,6 +3,7 @@
     @section('header')
         @include('frontend.layout.header2')
     @endsection
+    @include('sweetalert::alert')
     <section class="inner_page_breadcrumb style2 blog_grid_bg_color" style="background-image: url('/frontend/images/headerback.png')">
         <div class="container">
             <div class="row">

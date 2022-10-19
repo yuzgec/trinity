@@ -95,7 +95,6 @@ class HomeController extends Controller
     }
 
     public function temsilciolkayit(TemsilciRequest $request){
-
         $New = new Temsilci;
         $New->kurum  = $request->kurum;
         $New->baskakurum  = $request->baskakurum;
@@ -114,6 +113,8 @@ class HomeController extends Controller
         $New->telefon  = $request->telefon;
         $New->save();
 
+        alert()->success('Başarıyla Gönderildi','Talebiniz bizlere ulaştı. En kısa zaman içerisinde sizlere dönüş yapılacaktır.');
+        return redirect()->route('temsilciol');
 
     }
 
