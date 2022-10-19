@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TemsilciRequest;
 use App\Models\Faq;
 use App\Models\GalleryCategory;
 use App\Models\Page;
@@ -11,6 +12,7 @@ use App\Models\Service;
 use App\Models\ServiceCategory;
 use App\Models\Team;
 use App\Models\TeamCategory;
+use App\Models\Temsilci;
 use App\Models\VideoCategory;
 use Illuminate\Http\Request;
 
@@ -90,6 +92,29 @@ class HomeController extends Controller
 
     public function temsilciol(){
         return view('frontend.kurumsal.temsilciol');
+    }
+
+    public function temsilciolkayit(TemsilciRequest $request){
+
+        $New = new Temsilci;
+        $New->kurum  = $request->kurum;
+        $New->baskakurum  = $request->baskakurum;
+        $New->nasilhaber  = $request->nasilhaber;
+        $New->resmiad  = $request->resmiad;
+        $New->okuladres  = $request->okuladres;
+        $New->il  = $request->il;
+        $New->ilce  = $request->ilce;
+        $New->website  = $request->website;
+        $New->kurumtelefon  = $request->kurumtelefon;
+        $New->kurumemail  = $request->kurumemail;
+        $New->sosyalmedya  = $request->sosyalmedya;
+        $New->adsoyad  = $request->adsoyad;
+        $New->gorev  = $request->gorev;
+        $New->email  = $request->email;
+        $New->telefon  = $request->telefon;
+        $New->save();
+
+
     }
 
     public function egitmenol(){

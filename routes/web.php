@@ -29,7 +29,10 @@ use Spatie\Sitemap\SitemapGenerator;
     Route::get('/fotogaleri', 'HomeController@galeri')->name('galeriler');
 
     Route::get('/egitmenler', 'HomeController@egitmenler')->name('egitmenler');
+
     Route::get('/temsilciol', 'HomeController@temsilciol')->name('temsilciol');
+    Route::post('/temsilciolkayit', 'HomeController@temsilciolkayit')->name('temsilciolkayit');
+
     Route::get('/egitmenol', 'HomeController@egitmenol')->name('egitmenol');
     Route::get('/ik', 'HomeController@ik')->name('ik');
     Route::get('/sss', 'HomeController@sss')->name('sss');
