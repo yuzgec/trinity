@@ -25,31 +25,37 @@
                     <ul class="list-unstyled">
                         <li><a href="{{ route('kurumsal.detay', 'hakkimizda') }}"><i class="flaticon-right-arrow-1 right"></i> Hakkımızda</a></li>
                         <li><a href="{{ route('kurumsal.detay', 'sertfikasyon') }}"><i class="flaticon-right-arrow-1 right"></i> Sertfikasyon</a></li>
+{{--
                         <li><a href="{{ route('egitmenler') }}"><i class="flaticon-right-arrow-1 right"></i> Eğitmenler</a></li>
+--}}
                         <li><a href="{{ route('videolar') }}"><i class="flaticon-right-arrow-1 right"></i> Video Galeri</a></li>
                         <li><a href="{{ route('galeriler') }}"><i class="flaticon-right-arrow-1 right"></i> Foto Galeri</a></li>
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Temsilci Ol</a></li>
+                        <li><a href="{{ route('temsilciol') }}"><i class="flaticon-right-arrow-1 right"></i> Temsilci Ol</a></li>
                         <li><a href="{{ route('kurumsal.detay', 'ik') }}"><i class="flaticon-right-arrow-1 right"></i> İ.K.</a></li>
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> S.S.S</a></li>
+                        <li><a href="{{ route('sss') }}"><i class="flaticon-right-arrow-1 right"></i> S.S.S</a></li>
 
                     </ul>
 
                     <h4>HABERLER</h4>
                     <ul class="list-unstyled">
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Haberler</a></li>
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Etkinlikler</a></li>
-                        <li><a href="page-blog-v1.html"><i class="flaticon-right-arrow-1 right"></i> Duyurular</a></li>
+                        <li><a href="#"><i class="flaticon-right-arrow-1 right"></i> Haberler</a></li>
+                        <li><a href="#"><i class="flaticon-right-arrow-1 right"></i> Etkinlikler</a></li>
+                        <li><a href="#"><i class="flaticon-right-arrow-1 right"></i> Duyurular</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-sm-6 col-md-4 col-md-3 col-lg-3">
                 <div class="footer_program_widget home12 style2 pl60 pl0-lg">
-                    <h4>SINAVLAR</h4>
-                    <ul class="list-unstyled">
-                        @foreach($Service as $item)
-                            <li><a href="#"><i class="flaticon-right-arrow-1 right"></i> {{ $item->title }} - ({{ $item->getCategory->title }})</a></li>
-                        @endforeach
-                    </ul>
+                    @foreach($Service_Categories as $item)
+                        <h4><a href="{{ route('sinav.kategori', $item->slug) }}" class="text-white">{{ $item->title  }} - Sınavı</a></h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                @foreach($Service->where('category', $item->id) as $row)
+                                    <li><a href="{{route('sinav.detay', [$item->slug,$row->slug])}}"><i class="flaticon-right-arrow-1 right"></i> {{ $row->title }}</a></li>
+                                @endforeach
+                            </li>
+                        </ul>
+                    @endforeach
                 </div>
             </div>
             <div class="col-sm-6 col-md-4 col-md-3 col-lg-3">
@@ -57,7 +63,7 @@
                     <h4>KİTAPLAR</h4>
                     <ul class="list-unstyled">
                         @foreach($Service as $item)
-                            <li><a href="#"><i class="flaticon-right-arrow-1 right"></i> {{ $item->title }} - ({{ $item->getCategory->title }})</a></li>
+                            <li><a href="{{route('kitap.kategori', $item->slug) }}"><i class="flaticon-right-arrow-1 right"></i> {{ $item->title }} - ({{ $item->getCategory->title }})</a></li>
                         @endforeach
                     </ul>
                 </div>

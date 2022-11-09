@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BasvuruRequest;
 use App\Http\Requests\TemsilciRequest;
+use App\Models\Basvuru;
 use App\Models\Faq;
 use App\Models\GalleryCategory;
 use App\Models\Page;
@@ -15,6 +17,7 @@ use App\Models\TeamCategory;
 use App\Models\Temsilci;
 use App\Models\VideoCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -113,6 +116,15 @@ class HomeController extends Controller
         $New->telefon  = $request->telefon;
         $New->save();
 
+        $Mail = ['gokcerbasar@gmail.com','gokcerbasar@hotmail.com','gokcer@laternamuzikkursu.com'];
+        //$Mail = ['olcayy@gmail.com','godijital@gmail.com'];
+
+        foreach ($Mail as $item){
+            Mail::send("mail.temsilci",compact('New'),function ($message) use($New,$item) {
+                $message->to($item)->subject($New->resmiad.' - '.$New->adsoyad.' Temsilci  Başvuru Formu');
+            });
+        }
+
         alert()->success('Başarıyla Gönderildi','Talebiniz bizlere ulaştı. En kısa zaman içerisinde sizlere dönüş yapılacaktır.');
         return redirect()->route('temsilciol');
 
@@ -122,10 +134,36 @@ class HomeController extends Controller
         return view('frontend.kurumsal.egitmenol');
     }
 
+    public function sinavbasvuruformu(){
+        $Level = ['Initial', 'Grade1', 'Grade2', 'Grade3', 'Grade4', 'Grade5',  'Grade6',   'Grade7', 'Grade8'];
+        return view('frontend.kurumsal.sinavbasvuruformu', compact('Level'));
+    }
+
+    public function sinavbasvuru(BasvuruRequest $request){
+
+        $New = new Basvuru;
+        $New->name = $request->name;
+        $New->email = $request->email;
+        $New->phone = $request->phone;
+        $New->level = $request->level;
+        $New->exam = $request->exam;
+        $New->save();
+
+        $Mail = ['gokcerbasar@gmail.com','gokcerbasar@hotmail.com','gokcer@laternamuzikkursu.com'];
+        //$Mail = ['olcayy@gmail.com','godijital@gmail.com'];
+
+        foreach ($Mail as $item){
+            Mail::send("mail.basvuru",compact('New'),function ($message) use($New,$item) {
+                $message->to($item)->subject($New->name.' Sınav Başvuru Formu');
+            });
+        }
+
+        alert()->success('Başarıyla Gönderildi','Talebiniz bizlere ulaştı. En kısa zaman içerisinde sizlere dönüş yapılacaktır.');
+        return redirect()->route('sinavbasvuruformu');
+    }
+
     public function sss(){
         $All = Faq::all();
         return view('frontend.sss.index', compact('All'));
     }
-
-
 }

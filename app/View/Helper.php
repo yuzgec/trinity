@@ -5,6 +5,7 @@
     define('SWEETALERT_MESSAGE_CREATE', 'Eklendi');
     define('SWEETALERT_MESSAGE_UPDATE', 'Güncellendi');
     define('SWEETALERT_MESSAGE_DELETE', 'Silindi');
+    define('MAILGONDER', 'olcayy@gmail.com');
 
     //KULLANICI ADI BAŞ HARFLERİNİ GÖSTERME
     function isim($isim){

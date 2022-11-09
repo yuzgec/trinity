@@ -33,7 +33,12 @@ use Spatie\Sitemap\SitemapGenerator;
     Route::get('/temsilciol', 'HomeController@temsilciol')->name('temsilciol');
     Route::post('/temsilciolkayit', 'HomeController@temsilciolkayit')->name('temsilciolkayit');
 
+    Route::get('/sinavbasvuruformu', 'HomeController@sinavbasvuruformu')->name('sinavbasvuruformu');
+    Route::post('/sinavbasvuru', 'HomeController@sinavbasvuru')->name('sinavbasvuru');
+
+
     Route::get('/egitmenol', 'HomeController@egitmenol')->name('egitmenol');
+
     Route::get('/ik', 'HomeController@ik')->name('ik');
     Route::get('/sss', 'HomeController@sss')->name('sss');
 

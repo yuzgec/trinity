@@ -3610,7 +3610,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
 .cs_row_one .cs_instructor .cs_watch_list li:last-child a,
 .cs_row_one.csv3 .cs_watch_list li:last-child a{
   border-radius: 5px;
-  background-color: rgb(36, 65, 231);
+  background-color: #4e1b41;
   color: #ffffff;
   display: block;
   height: 30px;
@@ -4540,7 +4540,7 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu > li.last{
 }
 .my_setting_savechange_btn{
   border-radius: 5px;
-  background-color: rgb(36, 65, 231);
+  background-color: #4e1b41;
   font-size: 15px;
   font-family: "Open Sans";
   color: rgb(255, 255, 255);
@@ -9282,7 +9282,7 @@ ul.mc_parent_list ul.mc_child_list:hover .pricing_btn{
 }
 .ff_one .icon{
   border-radius: 5px;
-  background-color: rgb(36, 65, 231);
+  background-color: #4e1b41;
   -webkit-box-shadow:0px 1px 4px 0px rgba(0, 0, 0, 0.09);
   -moz-box-shadow:0px 1px 4px 0px rgba(0, 0, 0, 0.09);
   box-shadow:0px 1px 4px 0px rgba(0, 0, 0, 0.09);
@@ -12528,7 +12528,7 @@ body.translated{
 }
 .checkout_form .checkout_coupon form button{
   border-radius: 5px;
-  background-color: rgb(36, 65, 231);
+  background-color: #4e1b41;
   color: #ffffff;
   height: 50px;
   margin-bottom: 0;
@@ -12537,10 +12537,10 @@ body.translated{
 .checkout_form .checkout_coupon form button:hover{
   border-style: solid;
   border-width: 2px;
-  border-color: rgb(36, 65, 231);
+  border-color: #4e1b41;
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
-  color: rgb(36, 65, 231);
+  color: #4e1b41;
 }
 .checkout_form .checkout_coupon form button.btn2{
   margin-right: 24px;
@@ -12548,15 +12548,15 @@ body.translated{
 .checkout_form .checkout_coupon form button.btn3{
   border-style: solid;
   border-width: 2px;
-  border-color: rgb(36, 65, 231);
+  border-color: #4e1b41;
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
-  color: rgb(36, 65, 231);
+  color: #4e1b41;
   height: 50px;
   width: 180px;
 }
 .checkout_form .checkout_coupon form button.btn3:hover{
-  background-color: rgb(36, 65, 231);
+  background-color: #4e1b41;
   color: #ffffff;
 }
 .checkout_form .checkout_coupon .form2 .my_profile_select_box .dropdown.bootstrap-select button.btn{
@@ -12908,11 +12908,11 @@ body.translated{
 .more-review-btn{
   border-style: solid;
   border-width: 2px;
-  border-color: rgb(36, 65, 231);
+  border-color: #4e1b41;
   border-radius: 25px;
   font-size: 15px;
   font-family: "Open Sans";
-  color: rgb(36, 65, 231);
+  color: #4e1b41;
   line-height: 1.2;
   height: 50px;
   width: 234px;
@@ -13100,7 +13100,7 @@ ul.nav.nav-tabs.style4{
 }
 .mbp_comment_form.style2 .comments_form button.btn{
   border-radius: 5px;
-  background-color: rgb(36, 65, 231);
+  background-color: #4e1b41;
   color: rgb(255, 255, 255);
   font-size: 15px;
   font-family: "Open Sans";
@@ -13111,10 +13111,10 @@ ul.nav.nav-tabs.style4{
 .mbp_comment_form.style2 .comments_form button.btn:hover,
 .mbp_comment_form.style2 .comments_form button.btn:focus{
   background-color: #ffffff;
-  color: rgb(36, 65, 231);
+  color: #4e1b41;
   border-style: solid;
   border-width: 2px;
-  border-color: rgb(36, 65, 231);
+  border-color: #4e1b41;
 }
 .custom_hr{
   position: relative;
