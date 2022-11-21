@@ -13,9 +13,12 @@
                 </div>
                 <div class="footer_social_widget home12 mt15 text-left mb30-md ml20">
                     <ul>
-                        <li class="list-inline-item pl0"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item pl0"><a href="https://www.facebook.com/trinitymusicexamsizmir" target="_blank">
+                            <i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/trinity_college_london_turkey/" target="_blank">
+                            <i class="fa fa-instagram"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -51,7 +54,10 @@
                         <ul class="list-unstyled">
                             <li>
                                 @foreach($Service->where('category', $item->id) as $row)
-                                    <li><a href="{{route('sinav.detay', [$item->slug,$row->slug])}}"><i class="flaticon-right-arrow-1 right"></i> {{ $row->title }}</a></li>
+                                    <li><a href="{{route('sinav.detay', [$item->slug,$row->slug])}}">
+                                            <i class="flaticon-right-arrow-1 right"></i> {{ $row->title }}
+                                        </a>
+                                    </li>
                                 @endforeach
                             </li>
                         </ul>
@@ -63,7 +69,11 @@
                     <h4>KİTAPLAR</h4>
                     <ul class="list-unstyled">
                         @foreach($Service as $item)
-                            <li><a href="{{route('kitap.kategori', $item->slug) }}"><i class="flaticon-right-arrow-1 right"></i> {{ $item->title }} - ({{ $item->getCategory->title }})</a></li>
+                            <li><a href="{{route('kitap.kategori', $item->slug) }}">
+                                    <i class="flaticon-right-arrow-1 right"></i>
+                                    {{ $item->title }} - ({{ $item->getCategory->title }})
+                                </a>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
